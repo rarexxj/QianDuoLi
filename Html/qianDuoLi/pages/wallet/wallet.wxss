@@ -1,0 +1,146 @@
+/* pages/wallet/wallet.wxss */
+.list{
+  position: absolute;
+  top:512rpx;
+  bottom:0;
+  left: 0;
+  right: 0;
+}
+.walletTop {
+  padding: 30rpx 14rpx;
+  background: #fff;
+}
+
+.wallet .moneyinfo {
+  position: relative;
+  background-size: 722rpx 343rpx;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 722rpx;
+  height: 343rpx;
+  padding:68rpx 0 0 0rpx;
+  box-sizing: border-box;
+}
+
+.wallet .moneyinfo .tt {
+  padding-left: 42rpx;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  color: #b3b3b3;
+}
+.wallet .ul .li .tt{
+  width: 520rpx;
+
+}
+.wallet .moneyinfo .price {
+  font-family: 'Arial';
+  font-size: 88rpx;
+  line-height: 88rpx;
+  color: #e65555;
+  margin-top: 20rpx;
+  margin-left: 42rpx;
+}
+
+.wallet .moneyinfo .wt {
+  font-size: 26rpx;
+  line-height: 26rpx;
+  color: #b3b3b3;
+  margin-top: 30rpx;
+  margin-left: 42rpx;
+  display: flex;
+}
+
+.wallet .moneyinfo .wt .wtPrice {
+  line-height: 26rpx;
+  color: #333;
+  margin-right: 20rpx;
+}
+
+.wallet .moneyinfo .wt .wtTitle {
+  margin-right: 20rpx;
+}
+
+.wallet .moneyinfo .wd {
+  width: 100rpx;
+  height: 40rpx;
+  background: #fff;
+  border: 1px solid #5bb3ff;
+  border-radius: 20rpx;
+  color: #5bb3ff;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 40rpx;
+  display: block;
+  position: absolute;
+  right: 35rpx;
+  top: 129rpx;
+}
+.wallet .moneyinfo .wd1 {
+  width: 100rpx;
+  height: 40rpx;
+  background: #5bb3ff;
+  border: 1px solid #5bb3ff;
+  border-radius: 20rpx;
+  color: #fff;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 40rpx;
+  display: block;
+  position: absolute;
+  right: 35rpx;
+  top: 61rpx;
+}
+
+.wallet .title {
+  margin-top: 25rpx;
+  line-height: 85rpx;
+  font-size: 32rpx;
+  color: #333;
+  padding-left: 15rpx;
+  border-bottom: 1px solid #e8e8e8;
+  background: #fff;
+}
+
+.wallet .list .li {
+  padding: 17rpx 15rpx 15rpx;
+  height: 97rpx;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  height: 129rpx;
+  position: relative;
+}
+
+.wallet .list .tt {
+  line-height: 52rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.wallet .list .ti {
+  font-size: 24rpx;
+  color: #C6C6C6;
+  line-height: 45rpx;
+}
+
+.wallet .list .num {
+  font-size: 30rpx;
+  line-height: 30rpx;
+  position: absolute;
+  right: 15rpx;
+  top: 27rpx;
+}
+
+.wallet .list .jia {
+  color: #E01818;
+}
+
+.wallet .list .jian {
+  color: #59CB16;
+}
+
+.wallet .list .num {
+  font-size: 50rpx;
+  line-height: 30rpx;
+  margin-top: 20rpx;
+  
+}

@@ -1,0 +1,30 @@
+<!--pages/searchList/searchList.wxml-->
+
+<view class="search-box" id="search_box">
+  <view class="content">
+    <view class="search">
+      <view class="searchLBox">
+        <!-- <view class="close" bindtap="searchsta=false" style="background-image:url({{config.static_url+'back.png'}})"></view> -->
+        <input type="text" class="text" bindinput="searchtext" placeholder="搜索关键字" />
+      </view>
+      <view class="delete"></view>
+    </view>
+    <view class="btn" bindtap="search">搜索</view>
+  </view>
+  <!-- <view class="con">
+    <view class="p">大家都在搜...</view>
+    <view class="ul">
+      <navigator wx:for="tag in tags" bindtap="searchtext">{{tag}}</navigator>
+
+    </view>
+  </view> -->
+  <view class="nothing">
+    <view class="tb" style="background-image:url({{config.static_url+'img7.png'}})"></view>
+    <view class="p">抱歉，没有找到符合条件的商品</view>
+  </view>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

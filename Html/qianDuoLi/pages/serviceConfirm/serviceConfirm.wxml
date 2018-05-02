@@ -1,0 +1,45 @@
+<!--pages/confirm/confirm.wxml-->
+<view class="confirm-order" id="main">
+  <view class="productsInfo">
+    <image class="proImg" src="{{info.Service.Image.MediumThumbnail}}"></image>
+    <view class="proInfo">
+      <view class="title">{{info.Service.Name}}</view>
+      <view class="timeLongBox">
+        <text class="timeLong">预约市场</text>1小时
+      </view>
+      <view class="orderTimeBox">
+        <text class="time">预约时间段</text>{{date}} {{hour}}
+      </view>
+      <view class="priceBox">
+        <text class="price">价格</text>￥{{info.Service.Price}}
+      </view>
+    </view>
+  </view>
+  <view class="line pro-money">
+    <view class="tt ">实付金额</view>
+    <view class="price sellprice">¥
+      <view class="amo">
+        <view class="int">{{info.Service.Price}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="line">
+    <view class="tt w145">订单备注：</view>
+    <input type="text" class="text fl  bz" maxlength="50" bindinput="message" placeholder="选填，给卖家留言（限50字）" />
+  </view>
+  <view class="car-list">
+    <view class="hj">
+      合计：
+      <view class="price">¥
+        <view class="amo"> {{info.Service.Price}}</view>
+      </view>
+    </view>
+    <view class="balance" bindtap="submit">确认订单</view>
+
+  </view>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

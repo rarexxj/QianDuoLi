@@ -1,0 +1,121 @@
+/* pages/serviceTime/serviceTime.wxss */
+
+.productsInfo {
+  padding: 30rpx;
+  display: flex;
+}
+
+.proImg {
+  width: 191rpx;
+  height: 191rpx;
+  border-radius: 12rpx;
+  margin-right: 30rpx;
+}
+
+.proInfo {
+  width: 470rpx;
+}
+
+.proInfo .title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  font-size: 36rpx;
+  color: #333;
+  margin-bottom: 28rpx;
+}
+
+.timeLongBox, .orderTimeBox {
+  font-size: 24rpx;
+  color: #333;
+}
+
+.priceBox {
+  font-size: 28rpx;
+  color: #e9585b;
+}
+
+.timeLongBox, .orderTimeBox {
+  margin-bottom: 12rpx;
+}
+
+.timeLong, .time, .price {
+  width: 160rpx;
+  display: inline-block;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.chioceTimeTitle {
+  text-align: center;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.timeBox {
+  padding: 30rpx;
+}
+
+.topNav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.navBox {
+  margin-top: 20rpx;
+  margin-bottom: 55rpx;
+}
+
+.topNav view {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.topNav view.active {
+  color: #5bb3ff;
+  border-bottom: 6rpx solid #5bb3ff;
+}
+
+.topNav text {
+  display: block;
+  text-align: center;
+  margin-top: 8rpx;
+  margin-bottom: 3rpx;
+}
+
+.timeMainBox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.timeBox .timeBlock {
+  font-size: 24rpx;
+  color: #333;
+  width: 156rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 10rpx;
+  display: inline;
+  margin-bottom: 27rpx;
+  margin-right: 22rpx;
+  box-sizing: border-box;
+}
+.timeBox .timeBlock:nth-child(4n){
+  margin-right: 0;
+}
+
+.timeBox .timeBlock.no{
+  background: #efefef;
+  color: #999;
+  border: none;
+}
+.timeBox .timeBlock.active{
+  background: #5BB3FF;
+  color: #fff;
+  border: none;
+}

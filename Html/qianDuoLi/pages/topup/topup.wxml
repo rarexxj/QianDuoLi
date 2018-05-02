@@ -1,0 +1,25 @@
+<!--pages/top/top.wxml-->
+<view class="topUp">
+    <view class="importBox">
+        <view class="name">充值金额</view>
+        <input type="text" placeholder="请选择您要充值的金额" disabled value="{{price}}"/>
+    </view>
+    <view class="priceBox">
+        <view class="priceIn {{choseBtn==index?'active':''}}" wx:for="{{info.List}}" bindtap="choose" data-index="{{index}}">
+            <view class="sell">送{{item.Donation}}元</view>
+            <view class="topup">充{{item.Recharge}}元</view>
+        </view>
+    </view>
+
+    <button  class="next"  bindtap="topUp">充值</button>
+        <!-- <input type="hidden" name="orderId" v-model="id" id="orderId">
+        <input type="hidden" name="paymentCode" v-model="link" id="paymentCode">
+        <input type="hidden" name="useBalance" v-model="usecashbol" id="useBalance">
+        <input id="subimitButton" type="button" class="next" value="充值" @click="topUp"> -->
+</view>
+
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

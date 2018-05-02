@@ -1,0 +1,47 @@
+<!--pages/pay/pay.wxml-->
+<view class="shoppay" id="main">
+    <view class="deadline" wx:if="{{type!=2}}">剩余付款时间：
+      <view class="min">{{min}}</view>分
+      <view class="sec">{{seconds}}</view>秒 </view>
+    <view class="line" style="margin-top: 20rpx">
+      <view class="tt">订单编号</view>
+      <view class="num orderno">{{info.OrderNo}}</view>
+    </view>
+    <view class="line">
+      <view class="tt">订单金额</view>
+      <view class="price">¥
+        <view class="int">{{info.PayFee}}</view>
+      </view>
+    </view>
+    <view class="line" style="margin-top: 20rpx">
+      <view class="tt">我的余额</view>
+    </view>
+    <view class="payline money" bindtap="usecash">
+      <view class="tb" style="background-image:url({{config.static_url+'ico28.png'}})"></view>
+      <view class="tt">余额支付
+        <view class="span">可用余额：￥{{yue}}</view>
+      </view>
+      <view class="btn" style="background-image:url({{yueBtn?config.static_url+'ico11.png':config.static_url+'ico10.png'}})"></view>
+    </view>
+    <view class="line" style="margin-top: 20rpx">
+      <view class="tt">选择支付方式</view>
+      <view class="paymore">
+        还需支付:
+        <view class="price ">¥
+          <view class="int">{{pay}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="payline weixin " bindtap="wxChoose">
+      <view class="tb" style="background-image:url({{config.static_url+'ico29.png'}})"></view>
+      <view class="tt">微信钱包</view>
+      <view class="btn" style="background-image:url({{wxBtn?config.static_url+'ico11.png':config.static_url+'ico10.png'}})"></view>
+    </view>
+
+    <view id="subimitButton" class="bot-btn" bindtap="submit">立即支付</view>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+  <view class="msg-box">{{msgTitle}}</view>
+</view>

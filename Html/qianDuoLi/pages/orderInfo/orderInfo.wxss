@@ -1,0 +1,241 @@
+/* pages/orderInfo/orderInfo.wxss */
+
+.order-info .status {
+    padding: 24rpx 15rpx 27rpx;
+    background: #fff;
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 20rpx;
+}
+.order-info .status .color {
+    color: #5BB3FF;
+    display: inline-block;
+}
+.order-info .status .p {
+    font-size: 26rpx;
+    line-height: 48rpx;
+    color: #333;
+}
+.order-info .status .p .span{
+   display: inline-block;
+   color: #5BB3FF;
+}
+.order-info .status .time {
+    color: #5BB3FF;
+}
+.order-info .status .time .mins,.order-info .status .time .sec{
+  display: inline-block;
+}
+.order-info .status .btns {
+    margin-top: 44rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.order-info .status .btns .btn {
+    width: 345rpx;
+    height: 86rpx;
+    border: 1px solid #999999;
+    line-height: 86rpx;
+    text-align: center;
+    font-size: 36rpx;
+    color: #999;
+    border-radius: 8rpx;
+    display: block;
+}
+.order-info .status .btns .btn.cur {
+    border-color: #5BB3FF;
+    color: #5BB3FF;
+}
+.order-info .status .btns .bigbtn {
+    width: 100%;
+    height: 86rpx;
+    border: 1px solid #5BB3FF;
+    color: #5BB3FF;
+    text-align: center;
+    font-size: 36rpx;
+    border-radius: 8rpx;
+    line-height: 86rpx;
+    display: block;
+}
+.order-info .choadd {
+    height: 162rpx;
+    background: #fff;
+    position: relative;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 0 32rpx 0 73rpx;
+    background-repeat:no-repeat ;
+    background-position:15rpx 37rpx;
+    background-size: 34rpx 51rpx;
+}
+.order-info .choadd a {
+    display: block;
+    height: 100%;
+}
+.order-info .choadd .infoTopBox{
+  display: flex;
+}
+.order-info .choadd .name {
+    width: 278rpx;
+    line-height: 69rpx;
+    color: #444;
+    font-size:26rpx;
+    
+}
+.order-info .choadd .tel {
+    line-height: 69rpx;
+    color: #444;
+    font-size: 24rpx;
+}
+.order-info .choadd .add {
+    font-size: 24rpx;
+    line-height: 35rpx;
+    color: #666;
+}
+.order-info .pro-style {
+    background: #fff;
+    margin-top: 20rpx;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 28rpx 15rpx;
+    display: flex;
+}
+.pro-style .img {
+    width: 133rpx;
+    height: 133rpx;
+    border: 1rpx solid #e8e8e8;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 26rpx;
+}
+.pro-style .info {
+    width: 400rpx;
+}
+.pro-style .name {
+    font-size: 30rpx;
+    line-height: 36rpx;
+    color: #333;
+    height: 72rpx;
+    overflow: hidden;
+}
+.pro-style .num {
+    width: 145rpx;
+    text-align: right;
+    font-size: 24rpx;
+    line-height: 24rpx;
+}
+.pro-style .num .price {
+    color: #333;
+    margin-top: 10rpx;
+}
+.pro-style .back {
+    display: block;
+    border: 1rpx solid #999999;
+    color: #999999;
+    font-size: 24rpx;
+    text-align: center;
+    line-height: 51rpx;
+    padding: 0 14rpx;
+    border-radius: 8repx;
+    height: 51rpx;
+    margin-top: 15rpx;
+}
+.pro-style .num .number {
+    margin-top: 18rpx;
+    color: #666;
+}
+.pro-style .color {
+    font-size: 24rpx;
+    line-height: 24rpx;
+    color: #999999;
+    margin-top: 25rpx;
+    width: 300rpx;
+}
+.order-info .line {
+    height: 86rpx;
+    padding: 0 15rpx;
+    background: #fff;
+    border-bottom: 1px solid #e8e8e8;
+    display: flex;
+    justify-content: space-between;
+}
+.order-info .line .tt {
+    line-height: 86rpx;
+    font-size: 30rpx;
+    color: #333;
+}
+.order-info .line .price {
+    font-size: 30rpx;
+    line-height: 86rpx;
+    color: #e84608;
+    font-family: 'Arial';
+}
+.order-info .line .price .amo {
+    font-size: 36rpx;
+    display: inline-block;
+}
+.order-info .money {
+    margin-top: 20rpx;
+    border-top: 1px solid #e8e8e8;
+}
+.order-info .line.money .price {
+    font-size: 36rpx;
+}
+
+.order-info .paymoney {
+    padding: 16rpx 15rpx;
+    background: #fff;
+    text-align: right;
+}
+.order-info .paymoney .sum {
+    font-size: 24rpx;
+    color: #333;
+    line-height: 62rpx;
+}
+.lastPrice{
+    font-size: 30rpx;  
+    display: inline-block;
+}
+.order-info .paymoney .time {
+    font-size: 24rpx;
+    line-height: 50rpx;
+    color: #999999;
+}
+
+.order-info{
+    padding-bottom: 100rpx;
+}
+
+/*物流  */
+.order-info .logi {
+    background: #fff;
+    position: relative;
+}
+.order-info .logi .now {
+    font-size: 24rpx;
+    line-height: 56rpx;
+    color: #5BB3FF;
+}
+.order-info .logi .time {
+    font-size: 24rpx;
+    font-family: 'Arial';
+    color: #999999;
+    line-height: 41rpx;
+}
+.order-info .logi .i {
+    position: absolute;
+    width: 45rpx;
+    height: 32rpx;
+    background-size: cover;
+    top:32rpx;
+    left:8px;
+
+}
+.order-info .logi .click {
+    display: block;
+    line-height: 97rpx;
+    font-size: 30rpx;
+    color: #5BB3FF;
+    padding-left:80rpx;
+
+}

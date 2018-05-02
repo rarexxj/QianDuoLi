@@ -1,0 +1,42 @@
+/* pages/kind/kind.wxss */
+
+.class-box {
+    padding: 20rpx 20rpx 0 20rpx;
+}
+
+.class-title {
+    text-align: center;
+    height: 125rpx;
+    line-height: 125rpx;
+    color: #333;
+    font-size: 30rpx;
+}
+
+.class-box-list {
+    overflow: hidden;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.class-box-item {
+    width: 25%;
+    display: block;
+}
+
+.c-b-i-tpic {
+    width: 150rpx;
+    height: 150rpx;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.c-b-i-name {
+    height: 40rpx;
+    width: 100%;
+    text-align: center;
+    color: #666;
+    line-height: 40rpx;
+    overflow: hidden;
+    font-size:24rpx;
+}

@@ -1,0 +1,13 @@
+<!--pages/name/name.wxml-->
+<view class="name">
+    <view class="line">
+        <input type="text" class="text2" bindinput="name" placeholder="请输入昵称"/>
+    </view>
+    <button bindtap='fix'>提交</button>
+</view>
+
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

@@ -1,0 +1,130 @@
+/* pages/checkComment/checkComment.wxss */
+.box{
+  margin-bottom: 20rpx;
+}
+.che-com .pro-style {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e8e8e8;
+    height: 130rpx;
+    padding: 28rpx 15rpx;
+}
+.pro-style .img {
+    width: 133rpx;
+    height: 133rpx;
+    border: 1px solid #e8e8e8;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 26rpx;
+}
+.pro-style .num{
+  text-align: right;
+}
+
+.pro-style .num .price {
+    color: #333;
+    font-size: 24rpx;
+}
+.pro-style .num .number {
+    margin-top: 10rpx;
+    color: #666;
+    font-size: 24rpx;
+    line-height: 1;
+}
+.pro-style .color {
+    font-size: 24rpx;
+    line-height: 24rpx;
+    color: #999999;
+    margin-top: 25rpx;
+    width: 300rpx;
+    display: flex;
+    
+}
+.pro-style .color .span{
+    margin-right: 10rpx;
+}
+.pro-style .info {
+    width: 300rpx;
+}
+.proLeft{
+  display: flex;
+}
+.che-com .content {
+    padding: 35rpx 15rpx;
+    background: #fff;
+    border-bottom: 1px solid #e8e8e8;
+}
+.che-com .content .top{
+  display: flex;
+  justify-content: space-between;
+}
+.che-com .name {
+    font-size: 30rpx;
+    color: #333;
+    line-height: 34rpx;
+    margin-right: 6rpx;
+    height: 70rpx;
+    overflow: hidden;
+}
+.che-com .li {
+    width: 36rpx;
+    height: 34rpx;
+    float: left;
+    margin-right: 6rpx;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.che-com .time {
+    font-size: 24rpx;
+    color: #999999;
+    line-height: 34rpx;
+}
+.che-com .words {
+    font-size: 26rpx;
+    line-height: 44rpx;
+    color: #666666;
+    margin-top: 20rpx;
+    margin-bottom: 10rpx;
+}
+.che-com .reply {
+    font-size: 26rpx;
+    line-height: 30rpx;
+    color: #666666;
+    padding: 23rpx 28rpx;
+    background: #f0f0f0;
+    margin-top: 21rpx;
+        margin-bottom: 10rpx;
+    position: relative;
+}
+.che-com .reply .time {
+    font-size: 24rpx;
+    line-height: 29rpx;
+    margin-top: 19rpx;
+    color: #999;
+}
+.che-com .reply .i {
+    width: 14rpx;
+    height: 7rpx;
+    background-repeat:no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -7rpx;
+    left: 35rpx;
+}
+.che-com .name {
+    width: 210rpx;
+    overflow: hidden;
+}
+.img{
+   display: flex;
+  flex-wrap: wrap;
+}
+.img image {
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 40rpx;
+  margin-bottom: 10rpx;
+}

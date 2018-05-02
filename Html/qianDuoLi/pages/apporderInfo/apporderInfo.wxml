@@ -1,0 +1,130 @@
+<!--pages/orderInfo/orderInfo.wxml-->
+<view class="order-info" id="main">
+  <!--待付款-->
+  <view class="status" wx:if="{{info.OrderStatus == 0&&info.RefundStatus==0}}">
+    <view class="p">订单编号：{{info.OrderNo}}</view>
+    <view class="p">订单状态：
+      <view class="span ">等待买家付款</view>
+    </view>
+    <!-- <view class="p">还剩下
+      <view class="time paytime span">00:
+        <view class="mins">{{info.paymin}}</view>:
+        <view class="sec" data-sec="paysec">{{info.paysec}}</view>
+      </view> 支付（若未支付订单将取消）</view> -->
+    <view class="btns">
+      <view class="btn can-btns" bindtap="qx" data-id="{{info.Id}}">取消订单</view>
+      <navigator url="'pay.html?id='+id+&type=2" class="btn cur">立即付款</navigator>
+    </view>
+  </view>
+  <!--待服务-->
+  <view class="status" wx:if="{{info.OrderStatus == 5&&info.RefundStatus==0}}">
+    <view class="p">订单编号：{{info.OrderNo}}</view>
+    <view class="p">订单状态：
+      <view class="span ">待服务</view>
+    </view>
+    <view class="btns f-cb">
+      <view class="bigbtn  del-btns" bindtap="sureGet" data-id="{{info.Id}}">确认服务</view>
+    </view>
+  </view>
+  
+  <!--未评价-->
+  <view class="status" wx:if="{{info.EvaluateStatus==0&&info.OrderStatus==3&&info.RefundStatus==0}}">
+    <view class="p">订单编号：{{info.OrderNo}}</view>
+    <view class="p">订单状态：
+      <view class="span">交易完成</view>
+    </view>
+    <view class="btns">
+      <view class="btn del-btns" bindtap="del" data-id="{{info.Id}}">删除订单</view>
+      <navigator url="../comment/comment?id={{info.Id}}" class="btn cur">评价</navigator>
+    </view>
+  </view>
+  <!--已评价-->
+  <view class="status" wx:if="{{(info.EvaluateStatus == 1||info.EvaluateStatus == 2)&&info.OrderStatus==3&&info.RefundStatus==0}}">
+    <view class="p">订单编号：{{info.OrderNo}}</view>
+    <view class="p">订单状态：
+      <view class="span">交易完成</view>
+    </view>
+    <view class="btns">
+      <view class="btn del-btns" bindtap="del" data-id="{{info.Id}}">删除订单</view>
+      <navigator url="../checkComment/checkComment?id={{info.Id}}" class="btn cur">查看评价</navigator>
+    </view>
+  </view>
+  <!--已关闭-->
+  <view class="status" wx:if="{{info.OrderStatus == 4&&info.RefundStatus==0}}">
+    <view class="p">订单编号：{{info.OrderNo}}</view>
+    <view class="p">订单状态：
+      <view class="span">交易关闭</view>
+    </view>
+    <view class="btns f-cb">
+      <view class="bigbtn  del-btns" bindtap="del" data-id="{{info.Id}}">删除订单</view>
+    </view>
+  </view>
+  <!--退货中-->
+  <view class="status" wx:if="{{info.RefundStatus==1}}">
+    <view class="p">订单编号：{{info.OrderNo}}</view>
+    <view class="p">订单状态：
+      <view class="span">退款中</view>
+    </view>
+  </view>
+  <!--退款成功-->
+  <view class="status" wx:if="{{info.RefundStatus==2}}">
+    <view class="p">订单编号：{{info.OrderNo}}</view>
+    <view class="p">订单状态：
+      <view class="span">退款成功</view>
+    </view>
+  </view>
+  <view class="pro-style" wx:for="{{info.OrderGoods}}">
+    <view class="img" style="background-image: url({{item.Image.SmallThumbnail}}"></view>
+    <view class="info">
+      <view class="name">{{item.GoodsName}}</view>
+      <view class="color">
+        <view class="span">{{item.GoodsAttribute}}</view>
+      </view>
+    </view>
+    <view class="num">
+      <view class="price">¥ {{item.ShopPrice}}</view>
+      <view class="number">x {{item.Quantity}}</view>
+      <navigator url="../apply/apply?oid={{info.Id}}&gid={{item.ServiceId}}&mp={{item.MaxRefundAmount}}&&type=1" class="back" wx:if="{{info.OrderStatus==5 && info.RefundStatus==0}}">退款</navigator>
+    </view>
+
+  </view>
+
+  <view class="line">
+    <view class="tt">预约时间</view>
+    <view class="time">{{info.appointmentTime}}</view>
+  </view>
+  <view class="line money">
+    <view class="tt">商品金额</view>
+    <view class="price">¥
+      <view class="amo">{{info.GoodsAmount}}</view>
+    </view>
+  </view>
+  <!-- <view class="line">
+    <view class="tt">邮费</view>
+    <view class="price">¥
+      <view class="amo">{{info.ShippingFee}}</view>
+    </view>
+  </view> -->
+  <!-- <view class="line">
+    <view class="tt">积分抵扣</view>
+    <view class="price ">¥
+      <view class="amo">
+        <view class="int">{{res.IntegralMoney}}</view>
+      </view>
+    </view>
+  </view> -->
+  <view class="paymoney">
+    <view class="sum" wx:if="{{info.PayStatus == 0}}">待付金额：
+      <view class="lastPrice">¥{{info.PayFee}}</view>
+    </view>
+    <view class="sum" wx:else="">实付金额：
+      <view class="lastPrice">¥{{info.PayFee}}</view>
+    </view>
+    <view class="time">下单时间：{{info.CreateTime}}</view>
+  </view>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

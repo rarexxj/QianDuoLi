@@ -1,0 +1,85 @@
+<!--pages/productsInfoService/productsInfoService.wxml-->
+<view class="box">
+  <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000" class="indexSwiper" indicator-active-color="#5BB3FF">
+    <block wx:for="{{info.Image}}">
+      <swiper-item>
+        <image src="{{item.MediumThumbnail}}" mode="aspectFill" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="intBox">
+    <view class="typeTitle">
+      <text class="type">预约</text> {{info.Name}}
+    </view>
+    <view class="intBottomBox">
+      <view class="priceBox">
+        <view class="nowPrice">
+          <text class="nowPriceLogo">￥</text>{{info.Price}}
+        </view>
+        <view class="oldPrice">
+          ￥{{info.OriginalPrice}}
+        </view>
+      </view>
+      <view class="buyNum">|
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>{{info.SalesVolume}}人已付款</view>
+    </view>
+  </view>
+  <view class="information">
+    <view class="btns f-cb">
+      <view class="btn {{navBtn==1?'cur':''}}]" data-id="1" bindtap="navClick">商品详情</view>
+      <view class="btn eva-btn {{navBtn==2?'cur':''}}" data-id="2" bindtap="navClick">销量和评价</view>
+    </view>
+    <view class="info">
+      <view class="infoajax" wx:if="{{navBtn==1}}">
+        <rich-text nodes="{{info.Description}}"></rich-text>
+      </view>
+
+      <scroll-view class="evaluateajax" wx:if="{{navBtn==2}}" scroll-y bindscrolltolower="upload">
+        <!-- <view class="memlist f-cb" id="head" wx:if="order9.length">
+            <view class="ul">
+              <view class="li" wx:for="headlist in order9" style="background-image:url({{headlist.Avatar?headlist.Avatar.SmallThumbnail:''}})"></view>
+
+            </view>
+          </view> -->
+        <view class="che-com" id="che_com">
+          <view class="content" wx:for="{{evaluateInfo}}">
+            <view class="top">
+              <view class="topBox">
+                <view class="name" wx:if="{{item.IsAnonymity}}">匿名</view>
+                <view class="name" wx:else="">{{item.Appraiser}}</view>
+                <view class="starsBox">
+                  <view class="stars" style="background-image:url({{item.Score<1?config.static_url+'ico26.png':config.static_url+'ico27.png'}})"></view>
+                  <view class="stars" style="background-image:url({{item.Score<2?config.static_url+'ico26.png':config.static_url+'ico27.png'}})"></view>
+                  <view class="stars" style="background-image:url({{item.Score<3?config.static_url+'ico26.png':config.static_url+'ico27.png'}})"></view>
+                  <view class="stars" style="background-image:url({{item.Score<4?config.static_url+'ico26.png':config.static_url+'ico27.png'}})"></view>
+                  <view class="stars" style="background-image:url({{item.Score<5?config.static_url+'ico26.png':config.static_url+'ico27.png'}})"></view>
+                </view>
+              </view>
+              <view class="time">{{item.Time}}</view>
+            </view>
+            <view class="words">{{item.Content}}</view>
+            <view class="reply" wx:if="{{item.ReplyContent}}">
+              商家回复: {{item.ReplyContent}}
+              <view class="time">{{item.ReplyTime}}</view>
+              <view class="i" style="background-image:url({{config.static_url+'ico36.png'}})"></view>
+            </view>
+          </view>
+          <!-- <view class="che-more" wx:if="!evalmore" bindtap="evadata.pageNo++,moreeval()">点击加载更多评论</view> -->
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view style="width:750rpx;height:110rpx;"></view>
+  <view class="btnBox">
+    <button class="talkAbout" open-type="contact">
+        <view class="talk" style="background-image:url({{config.static_url+'ico47.png'}})"></view>
+        <view class="span">客服</view>
+      </button>
+    <view class="toOrder" bindtap="toOrder">立即预约</view>
+  </view>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+  <view class="msg-box">{{msgTitle}}</view>
+</view>

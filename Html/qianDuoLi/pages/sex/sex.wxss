@@ -1,0 +1,35 @@
+/* pages/sex/sex.wxss */
+.sexBox .line {
+    padding: 0 15rpx;
+    background: #fff;
+    height: 88rpx;
+    line-height: 88rpx;
+    border-bottom: 1px solid #e8e8e8;
+    display: flex;
+}
+.sexBox .line image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 24rpx;
+  margin-right: 20rpx;
+}
+.sexBox .sex{
+  display: flex;
+  margin-right: 50rpx;
+}
+.sexBox .sex text{
+    font-size:32rpx;
+}
+button {
+  width: 610rpx;
+  display: block;
+  height: 88rpx;
+  background: #5BB3FF;
+  font-size: 36rpx;
+  color: #fff;
+  margin: 77rpx auto 0;
+  border: 0;
+  border-radius: 7rpx;
+  text-align: center;
+  line-height: 88rpx;
+}

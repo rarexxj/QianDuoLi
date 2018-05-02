@@ -1,0 +1,10 @@
+<!--pages/aftersales/aftersales.wxml-->
+<view class="aftersales">
+    <navigator url="../apply/apply?oid={{oid}}&gid={{gid}}&mp={{mp}}&RefundType=0" class="back" style="background-image:url({{config.static_url+'img9.png'}})"></navigator> 
+     <navigator url="../apply/apply?oid={{oid}}&gid={{gid}}&mp={{mp}}&RefundType=1" class="backand" style="background-image:url({{config.static_url+'img10.png'}})"></navigator>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

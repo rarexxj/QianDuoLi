@@ -1,0 +1,69 @@
+<!--pages/set/set.wxml-->
+<view class="my">
+  <view class="head" bindtap="setPhotoInfo">
+    <view class="title">头像</view>
+    <view class="avatorRight">
+      <view class="img">
+        <image wx:if="{{avator}}" src="{{avator}}"></image>
+        <image wx:else src="{{config.static_url+'img2.png'}}"></image>
+      </view>
+      <view class="jt" style="background-image:url({{config.static_url+'ico4.png'}})"></view>
+    </view>
+  </view>
+  <view class="line martop myname">
+    <navigator url="../name/name">
+      <view class="title">昵称</view>
+      <view class="titleRight">
+        <view class="p">{{info.NickName}}</view>
+        <view class="jt" style="background-image:url({{config.static_url+'ico4.png'}})"></view>
+      </view>
+     
+    </navigator>
+  </view>
+  <view class="line mysex">
+    <navigator url="../sex/sex">
+      <view class="title">性别</view>
+      <view class="titleRight">
+      <view class="p" wx:if="{{info.Sex==1}}">男</view>
+      <view class="p" wx:if="{{info.Sex==2}}">女</view>
+      <view class="jt" style="background-image:url({{config.static_url+'ico4.png'}})"></view>
+      </view>
+    </navigator>
+  </view>
+  <view class="line mybir">
+    <navigator url="../birthday/birthday">
+      <view class="title">生日</view>
+      <view class="titleRight">
+      <view class="p">{{birthday}}</view>
+      <view class="jt" style="background-image:url({{config.static_url+'ico4.png'}})"></view>
+      </view>
+    </navigator>
+  </view>
+  <view class="line martop myph">
+    <navigator url="../bindNewPhone/bindNewPhone">
+      <view class="title">绑定手机</view>
+      <view class="titleRight">
+      <view class="p">{{info.Phone?info.Phone:''}}</view>
+      <view class="jt" style="background-image:url({{config.static_url+'ico4.png'}})"></view>
+      </view>
+    </navigator>
+  </view>
+  <!-- <view class="line typeTwo">
+    <navigator url="../resetPassword/resetPassword">
+      <view class="title">修改密码</view>
+      <view class="jt" style="background-image:url({{config.static_url+'ico4.png'}})"></view>
+    </navigator>
+  </view> -->
+  <view class="line typeTwo martop">
+    <navigator url="../address/address">
+      <view class="title">管理收货地址</view>
+      <view class="jt" style="background-image:url({{config.static_url+'ico4.png'}})"></view>
+    </navigator>
+  </view>
+  <!-- <view class="submit">退出登录</view> -->
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

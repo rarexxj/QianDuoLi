@@ -1,0 +1,47 @@
+/* pages/service/service.wxss */
+.scrollBox{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+.box{
+  padding: 30rpx;
+  background: #F7F7FA;
+}
+.mainBox {
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.mainBox navigator{
+  border-radius: 8rpx;
+  margin-bottom: 26rpx;
+}
+.mainImg {
+  width: 333rpx;
+  height: 333rpx;
+  display: block;
+  border-radius: 8rpx 8rpx 0 0;
+}
+
+.contentBox{
+  padding: 16rpx 16rpx 22rpx 16rpx;
+  background: #fff;
+  border-radius: 8rpx;
+}
+.contentBox .name {
+  font-size: 28rpx;
+  color: #333;
+  line-height: 1;
+  margin-bottom: 13rpx;
+}
+
+.contentBox .price {
+  font-size: 24rpx;
+  color: #e01818;
+  line-height: 1;
+}

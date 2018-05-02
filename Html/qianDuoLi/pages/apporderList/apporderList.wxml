@@ -1,0 +1,72 @@
+<!--pages/orderList/orderList.wxml-->
+<view>
+  <view class="my-order">
+    <view class="ordernav">
+      <view class="topNav {{curIndex==index?'cur':''}}" wx:for="{{orderType}}" url="orderlist.html?type={{item.id}}" bindtap='navClick' data-index="{{index}}">{{item.name}}</view>
+    </view>
+    <scroll-view class="content" bindscrolltolower="upload" scroll-y>
+      <view class="box normal" wx:for="{{info}}" data-id="{{item.Id}}">
+        <navigator class="to-info" url="../apporderInfo/apporderInfo?id={{item.Id}}">
+          <view class="top">
+            <view class="time ">{{item.CreateTime}}</view>
+            <view class="st" wx:if="{{item.OrderStatus == 0&&item.RefundStatus==0}}">待付款</view>
+             <view class="st" wx:if="{{item.OrderStatus == 5&&item.RefundStatus==0}}">待服务</view>
+            <view class="st" wx:if="{{item.OrderStatus == 3&&item.RefundStatus==0}}">已完成</view>
+            <view class="st" wx:if="{{item.OrderStatus == 4&&item.RefundStatus==0}}">已关闭</view>
+            <view class="st" wx:if="{{item.RefundStatus==1}}">退款中</view>
+            <view class="st" wx:if="{{item.RefundStatus==2}}">退款成功</view>
+          </view>
+          <view class="pro-style" wx:for="{{item.OrderGoods}}" wx:for-item="listchild" data-id="listchild.SingleGoodsId">
+            <view class="pro-left">
+              <view class="img" style="background-image: url({{listchild.Image.SmallThumbnail}})"></view>
+              <view class="info">
+                <view class="name">{{listchild.GoodsName}}
+                  <!-- <span wx:if="listchild.GoodsName.length >18">...</span> -->
+                </view>
+                <view class="color">
+                  <view class="span">{{listchild.GoodsAttribute}} </view>
+                </view>
+              </view>
+            </view>
+            <view class="num">
+              <view class="price">¥
+                <view class="span">{{listchild.ShopPrice}}</view>
+              </view>
+              <view class="number">x {{listchild.Quantity}}</view>
+
+              <view catchtap="afterInfo" class="back to-callback" wx:if="{{listchild.RefundStatus==1||listchild.RefundStatus==2}}" data-oid="{{item.Id}}" data-gid="{{listchild.ServiceId}}">
+                退款详情
+              </view>
+            </view>
+
+          </view>
+          <view class="total">共{{item. OrderGoods.length}}件商品合计
+            <view class="span">¥ {{item.PayFee}}</view>
+          </view>
+        </navigator>
+        <view class="btns">
+          <navigator url="../pay/pay?id={{item.Id}}&type=2" class="btn  cur" wx:if="{{item.PayStatus==0&&item.OrderStatus==0}}">立即付款</navigator>
+           <view class="btn cur confirm-btns" wx:if="{{item.OrderStatus==5 && item.RefundStatus==0}}" bindtap="sureGet" data-id="{{item.Id}}" data-index="{{index}}">完成服务
+          </view> 
+          <view class="delete-btns btn cur" wx:if="{{item.OrderStatus==4||item.OrderStatus==3}}" bindtap="del" data-id="{{item.Id}}" data-index="{{index}}">删除订单
+          </view>
+          <navigator url="../comment/comment?id={{item.Id}}&type=1" class="btn cur" wx:if="{{item.EvaluateStatus==0 && item.OrderStatus==3 &&item.RefundStatus==0}}">评价</navigator>
+          <navigator url="../checkComment/checkComment?id={{item.Id}}" class="btn cur" wx:if="{{(item.EvaluateStatus==1||item.EvaluateStatus==2) && item.OrderStatus==3}}">查看评价</navigator>
+        </view>
+      </view>
+      <view class="search-box" wx:if="{{!info.length}}">
+        <view class="nothing">
+          <view class="tb" style="background-image:url({{config.static_url+'img7.png'}})"></view>
+          <view class="p">抱歉，暂无订单</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

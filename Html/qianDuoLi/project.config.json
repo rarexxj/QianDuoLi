@@ -1,0 +1,157 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.6.6",
+	"appid": "wx664788124b1e6b60",
+	"projectname": "QianDuoLi",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "服务订单详情",
+					"pathName": "pages/apporderInfo/apporderInfo",
+					"query": "id=e5ff8562-b747-4bd4-a4d2-08a5505f710d"
+				},
+				{
+					"id": -1,
+					"name": "钱包",
+					"pathName": "pages/wallet/wallet",
+					"query": "PageNo=1&Limit=6"
+				},
+				{
+					"id": -1,
+					"name": "我的订单列表",
+					"pathName": "pages/orderList/orderList",
+					"query": "PageNo=1&Limit=6"
+				},
+				{
+					"id": 3,
+					"name": "确认订单",
+					"pathName": "pages/confirm/confirm",
+					"query": "{CartIds : [\"b33911da-9bca-43dc-8495-cdb6a4c42405\", \"c910beb7-2bcc-49b7-80c5-1058d4c30ca1\"],IsFromCart : true}"
+				},
+				{
+					"id": 4,
+					"name": "商品详情",
+					"pathName": "pages/productsInfo/productsInfo",
+					"query": "id=552190a4-5a59-44de-810e-6df6f7c2a228"
+				},
+				{
+					"id": 5,
+					"name": "服务确认订单",
+					"pathName": "pages/serviceConfirm/serviceConfirm",
+					"query": "id=f1b7a664-a7f8-4248-b719-5a3ff16c01fd&date=2017/12/30&hour=12:00-13:00&hourId=436e83d0-d31e-11e7-b942-00163e00834b"
+				},
+				{
+					"id": -1,
+					"name": "服务商品详情",
+					"pathName": "pages/productsInfoService/productsInfoService",
+					"query": "id=c64e3298-4500-4da1-9e72-7da26524f8ff"
+				},
+				{
+					"id": -1,
+					"name": "合伙人",
+					"pathName": "pages/partner/partner",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "购物车",
+					"pathName": "pages/shopcar/shopcar",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "个人中心",
+					"pathName": "pages/center/center",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "退款详情",
+					"pathName": "pages/afterInfo/afterInfo",
+					"query": "oid=0f76860f-1bfd-471a-9615-dd78a2b216d8&gid=467fade6-a04d-b1e2-a60e-62b56b6d760a"
+				},
+				{
+					"id": -1,
+					"name": "退款发货回来",
+					"pathName": "pages/returnAddress/returnAddress",
+					"query": "id=1b0fdd53-0d9f-4b0e-8d21-df6779b69b1d"
+				},
+				{
+					"id": -1,
+					"name": "服务选时间",
+					"pathName": "pages/serviceTime/serviceTime",
+					"query": "id=0df05a27-51b1-4868-ad54-2a4d5298ce67"
+				},
+				{
+					"id": 13,
+					"name": "评价",
+					"pathName": "pages/comment/comment",
+					"query": "id=da6a443c-4e62-4eab-ac6b-082a67e0d119"
+				},
+				{
+					"id": 14,
+					"name": "支付",
+					"pathName": "pages/pay/pay",
+					"query": "id=259729cb-89cc-43ba-bae7-b793794771fd"
+				},
+				{
+					"id": -1,
+					"name": "查看评价",
+					"pathName": "pages/checkComment/checkComment",
+					"query": "id=9aacbee2-0b03-4633-8b0c-c87b70557494"
+				},
+				{
+					"id": -1,
+					"name": "商品",
+					"pathName": "pages/kind/kind",
+					"query": "id=259729cb-89cc-43ba-bae7-b793794771fd"
+				},
+				{
+					"id": 17,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": 18,
+					"name": "商品详情",
+					"pathName": "pages/productsInfo/productsInfo",
+					"query": "id=552190a4-5a59-44de-810e-6df6f7c2a228"
+				},
+				{
+					"id": -1,
+					"name": "商品详情",
+					"pathName": "pages/productsInfoService/productsInfoService",
+					"query": "id=552190a4-5a59-44de-810e-6df6f7c2a228"
+				}
+			]
+		}
+	}
+}

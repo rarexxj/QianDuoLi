@@ -1,0 +1,17 @@
+<!--pages/birthday/birthday.wxml-->
+<view class="birthday">
+  <view class="line f-cb">
+    <picker bindchange="bindPickerChange" mode="date" start="1935-01-01" end="2017-01-01" value="changeTime">
+      <view class="picker" wx:if="{{!changeTime}}">请选择
+      </view>
+      <view class="picker" wx:else="">{{changeTime}}
+      </view>
+    </picker>
+  </view>
+  <button bindtap="fix">提交</button>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

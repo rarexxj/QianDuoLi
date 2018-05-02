@@ -1,0 +1,270 @@
+/* pages/productsInfoService/productsInfoService.wxss */
+
+.box {
+  background: #f7f7fa;
+}
+
+.indexSwiper {
+  height: 530rpx;
+  width: 750rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 530rpx;
+}
+
+.intBox {
+  padding: 30rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.type {
+  font-size: 26rpx;
+  color: #fff;
+  line-height: 1;
+  padding: 2rpx 7rpx;
+  background: #f27c20;
+  border-radius: 6rpx;
+}
+
+.typeName {
+  font-size: 36rpx;
+  color: #333;
+  margin-left: 0.2rem;
+}
+
+.intBottomBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.priceBox {
+  display: flex;
+}
+
+.nowPriceLogo {
+  font-size: 38rpx;
+  color: #e9585b;
+}
+
+.nowPrice {
+  font-size: 60rpx;
+  color: #e9585b;
+}
+
+.oldPrice {
+  font-size: 24rpx;
+  color: #acacac;
+  margin-left: 17rpx;
+  margin-top: 36rpx;
+  text-decoration: line-through;
+}
+
+.buyNum {
+  font-size: 24rpx;
+  color: #b9b9b9;
+  margin-top: 36rpx;
+}
+
+.information {
+  background: #fff;
+}
+
+.information .btns {
+  height: 84rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dedede;
+}
+
+.information .btn {
+  float: left;
+  width: 50%;
+  height: 84rpx;
+  font-size: 28rpx;
+  color: #999;
+  line-height: 84rpx;
+  text-align: center;
+}
+
+.information .btn.cur {
+  color: #5bb3ff;
+  border-bottom: 4rpx solid #5bb3ff;
+}
+
+.information .infoajax {
+  width: 750rpx;
+  overflow: hidden;
+}
+
+.evaluateajax {
+}
+
+.evaluateajax .memlist {
+  padding: 45rpx 15rpx 23rpx;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.evaluateajax .memlist .memlistUl {
+  width: 635rpx;
+}
+
+.evaluateajax .memlist .memlistLi {
+  width: 100rpx;
+  height: 100rpx;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 27rpx;
+  margin-bottom: 22rpx;
+  float: left;
+  border-radius: 50%;
+}
+
+.che-com .pro-style {
+  background: #fff;
+}
+
+.che-com .content {
+  padding: 35rpx 15rpx;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+}
+.top{
+  display: flex;
+  justify-content: space-between;
+}
+.topBox{
+  display: flex;
+}
+.che-com .name {
+  width: 200rpx;
+  font-size: 30rpx;
+  color: #333;
+  line-height: 34rpx;
+  margin-right: 18rpx;
+  overflow: hidden;
+}
+
+.che-com .checomUl {
+  display: flex;
+}
+
+.che-com .checomLi {
+  width: 36rpx;
+  height: 34rpx;
+  margin-right: 6rpx;
+  background-size: cover;
+}
+
+.che-com li.cur {
+  background-size: cover;
+}
+
+.che-com .time {
+  font-size: 24rpx;
+  color: #999;
+  line-height: 34rpx;
+}
+
+.che-com .words {
+  font-size: 26rpx;
+  line-height: 44rpx;
+  color: #666;
+  margin-top: 20rpx;
+}
+
+.che-com .reply {
+  font-size: 26rpx;
+  line-height: 30rpx;
+  color: #666;
+  padding: 23rpx 28rpx;
+  background: #f0f0f0;
+  margin-top: 21rpx;
+  position: relative;
+}
+
+.che-com .reply .time {
+  font-size: 24rpx;
+  line-height: 29rpx;
+  margin-top: 19rpx;
+  color: #999;
+}
+
+.che-com .reply i {
+  width: 14rpx;
+  height: 7rpx;
+  background-size: cover;
+  position: absolute;
+  top: -7rpx;
+  left: 35rpx;
+}
+
+.btnBox {
+  width: 750rpx;
+  background: #fff;
+  border-top: 1px solid #e8e8e8;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnBox .toOrder {
+  width: 568rpx;
+  height: 109rpx;
+  background: #5bb3ff;
+  color: #fff;
+  font-size: 36rpx;
+  line-height: 109rpx;
+  text-align: center;
+}
+
+.starBox {
+  display: flex;
+}
+
+.stars {
+  width: 36rpx;
+  height: 34rpx;
+  float: left;
+  margin-right: 6rpx;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* 客服 */
+
+.talk {
+  width: 50rpx;
+  height: 42rpx;
+  background: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15rpx;
+  margin-bottom: 14rpx;
+}
+
+.talkAbout {
+  width: 182rpx;
+  height: 109rpx;
+  box-sizing: border-box;
+  border: 0;
+  background: #fff;
+}
+
+.talkAbout::after{
+  border: 0px;
+}
+.talkAbout .span{
+  font-size: 30rpx;
+  color: #5BB3FF;
+  line-height: 1;
+}

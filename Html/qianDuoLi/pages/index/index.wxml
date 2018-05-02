@@ -1,0 +1,102 @@
+<!--index.wxml-->
+<view>
+    <view class="topNavBox">
+        <view class="search-tit f-cb">
+            <view type="submit" class="btn" style="background-image:url({{config.static_url+'ico1.png'}})"></view>
+            <input class="text" disabled placeholder-class="searchPlaceh" placeholder="请选择搜索内容" bindconfirm="search" bindtap="searchTo" />
+            <!-- <input class="text" placeholder-class="searchPlaceh" placeholder="请选择搜索内容" bindconfirm="search" bindinput="searchInput" /> -->
+        </view>
+    </view>
+    <scroll-view scroll-x>
+        <view class="class-list">
+            <navigator class="class-item" wx:for="{{home.Categorys}}" url="../productsList/productsList?id={{item.Id}}">
+                <view class="c-i-img" style="background-image: url({{item.CategoryImage.MediumThumbnail}})"></view>
+                <view class="c-i-title">{{item.Name}}</view>
+            </navigator>
+        </view>
+    </scroll-view>
+    <view class="bannerBox">
+        <swiper indicator-dots="true" duration="1000" class="indexSwiper" indicator-active-color="#5BB3FF" autoplay='3000'>
+            <block wx:for="{{banner}}">
+                <swiper-item>
+                    <navigator wx:if="{{item.type=='Goods'}}" url="../productsInfo/productsInfo?id={{item.id}}">
+                        <image src="{{item.CoverImage.MediumThumbnail}}" class="slide-image" />
+                    </navigator>
+                    <navigator wx:elif="{{item.type=='GoodsCategory'}}" url="../productsList/productsList?id={{item.id}}">
+                        <image src="{{item.CoverImage.MediumThumbnail}}" class="slide-image" />
+                    </navigator>
+                    <navigator wx:else="">
+                        <image src="{{item.CoverImage.MediumThumbnail}}" class="slide-image" />
+                    </navigator>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view style="width:750rpx;height:20rpx;background-color:#F7F7FA;"></view>
+    <view class="itemBox">
+        <!-- <view class="itemBox" wx:if="{{home.Article.length}}"> -->
+        <view class="titleBox">
+            <view class="indexTitle" style="background-image:url({{config.static_url+'ico2.png'}})">宠物无忧</view>
+            <navigator class="lookAll" style="background-image:url({{config.static_url+'ico3.png'}})" url="../article/article">查看全部</navigator>
+        </view>
+        <view class="item" wx:for="{{home.Article}}">
+            <navigator url="../articleInfo/articleInfo?id={{item.Id}}">
+                <image class="itemImg" src='{{item.Images[0].MediumThumbnail}}'></image>
+                <view class="itemRight">
+                    <view class="title">{{item.Title}}</view>
+                    <view class="others">
+                        <view class="time">{{item.CreateTime}}</view>
+                        <view class="type">#{{item.Tag}}</view>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+
+    <navigator url="{{home.Adverts[0].url}}">
+        <image class="bannerTwo" mode="widthFix" src="{{home.Adverts[0].AdvertImage.MediumThumbnail}}"></image>
+    </navigator>
+    <view class="mainSelBox">
+        <view class="titleBox titleAfter">
+            <view class="indexTitle" style="background-image:url({{config.static_url+'ico2.png'}})">推荐商品</view>
+            <navigator class="lookAll" url="../productsList/productsList" style="background-image:url({{config.static_url+'ico3.png'}})">查看全部</navigator>
+        </view>
+        <view class="mainRecommend">
+            <navigator url="{{home.Adverts[1].url}}" style="background-image:url({{home.Adverts[1].AdvertImage.MediumThumbnail}})" class="recommendOne">
+            </navigator>
+            <view class="recommendSBox">
+                <navigator class="recommendTwo" url="{{home.Adverts[2].url}}" style="background-image:url({{home.Adverts[2].AdvertImage.MediumThumbnail}})">
+                </navigator>
+                <navigator class="recommendThree" url="{{home.Adverts[3].url}}" style="background-image:url({{home.Adverts[3].AdvertImage.MediumThumbnail}})">
+                </navigator>
+            </view>
+        </view>
+        <view class="mainSellBox" wx:if="{{home.RecommendGoods.length}}">
+            <navigator url="../productsInfo/productsInfo?id={{item.Id}}" class="mainSellBoxNav" wx:for="{{home.RecommendGoods}}">
+                <view style="background-image:url({{item.Image.MediumThumbnail}})" class="mainSellImg"></view>
+                <view class="mainSellRight">
+                    <view class="title">
+                        <view class="type" wx:if="{{item.IsHot}}">热卖</view>{{item.Name}}</view>
+                    <!-- <view class="type" wx:if="{{item.IsHot}}">热卖</view><view class="type" wx:if="{{item.IsNew}}">新品</view><view class="type" wx:if="{{item.IsBest}}">精品</view>{{item.Name}}</view> -->
+                    <view class="priceBox">
+                        <view class="priceLogo">￥
+                            <view class="mainPrice">{{item.ShopPrice}}</view>
+                        </view>
+                        <view class="oldPrice">￥{{item.OriginalPrice}}</view>
+                    </view>
+                    <view class="buyNum">已购人数:{{item.SaleCount}}</view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

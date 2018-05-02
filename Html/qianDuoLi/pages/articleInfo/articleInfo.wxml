@@ -1,0 +1,16 @@
+<!--pages/articleInfo/articleInfo.wxml-->
+<view class="infoDetailBox">
+  <view class="infoDetailTitle">
+    {{info.Title}}
+  </view>
+  <view class="detailTipsBox">
+    <view class="infoTime">{{info.CreateTime}}</view>
+    <view class="infoSeeNum">阅读数：{{info.ReadNum}}</view>
+  </view>
+  <rich-text class="titDetailContent" nodes="{{info.Content}}"/>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

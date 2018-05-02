@@ -1,0 +1,16 @@
+<!--pages/aboutUs/aboutUs.wxml-->
+<view>
+  <view class="par-plan">
+    <view class="textarea" id="textarea">
+      <view class="title">{{info.Title}}</view>
+      <!-- <view class="p">{{info.SubTitle}}</view> -->
+      <rich-text class="bd" nodes="{{info.Content}}"/>
+      <!-- <view class="bd">{{info.Content}}</view> -->
+    </view>
+  </view>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

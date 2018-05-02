@@ -1,0 +1,97 @@
+<!--pages/afterInfo/afterInfo.wxml-->
+<view class="order-info as-info" id="as_info">
+  <view class="statusbox">
+    <!--审核中-->
+    <view class="status" wx:if="{{info.Datail.RefundStatus==0}}">
+      <view class="p">订单编号：{{info.Datail.RefundNo}}</view>
+      <view class="p">订单状态：
+        <span class="e84608">卖家审核中</span>
+      </view>
+      <view class="btns">
+        <!-- <navigator wx:if="{{type==1}}" url="../apply/apply?RefundType={{info.Datail.RefundType}}&mp={{info.Datail.RefundAmount}}&oid={{info.Datail.OrderId}}&gid={{info.Datail.SingleGoodsId}}&type=1" class="btn">修改申请</navigator>
+
+                    <navigator wx:else="{{type!=1}}" url="../apply/apply?RefundType={{info.Datail.RefundType}}&mp={{info.Datail.RefundAmount}}&oid={{info.Datail.OrderId}}&gid={{info.Datail.SingleGoodsId}}" class="btn">修改申请</navigator> -->
+        <view class="bigbtn cur can-btns" bindtap="canBtn" data-id="{{info.Datail.Id}}">撤销申请</view>
+      </view>
+    </view>
+    <!--已发货，审核中-->
+    <view class="status" wx:if="{{info.Datail.RefundStatus==2&&info.Datail.ReviewResult==1&&info.Datail.RefundType==1&&info.Datail.ShippingName}}">
+      <view class="p">订单编号：{{info.Datail.RefundNo}}</view>
+      <view class="p">订单状态：
+        <view class="e84608">审核通过,等待卖家退款</view>
+      </view>
+    </view>
+    <!--审核通过-->
+    <view class="status" wx:if="{{info.Datail.ReviewResult==1&&info.Datail.RefundStatus==3}}">
+      <view class="p">订单编号：{{info.Datail.RefundNo}}</view>
+      <view class="p">订单状态：
+        <view class="e84608">审核通过</view>
+      </view>
+      <view class="getsuccess">退款成功！ {{info.Datail.RefundAmount}}元已按照原打款路径退回</view>
+    </view>
+    <!--审核未通过-->
+    <view class="status" wx:if="{{info.Datail.ReviewResult==0&&info.Datail.RefundStatus==3}}">
+      <view class="p">订单编号：{{info.Datail.RefundNo}}</view>
+      <view class="p">订单状态：
+        <view class="e84608">审核未通过</view>
+      </view>
+      <view class="getsuccess">抱歉，你的退款申请审核未通过!</view>
+      <!--<view class="tips">你可以修改后再次发起，或者直接联系客服处理 <br> 客服：宝宝    QQ：601113254</view>-->
+      <view class="tips">{{info.Datail.ReviemMemo}}</view>
+    </view>
+    <!--退货并退款（审核通过）-->
+    <view class="status" wx:if="{{info.Datail.ReviewResult==1&&info.Datail.RefundType==1&&info.Datail.RefundStatus==2&&info.Datail.ShippingName==null}}">
+      <view class="p">订单编号：{{info.Datail.RefundNo}}</view>
+      <view class="p">订单状态：
+        <view class="e84608">审核通过,等待买家发货</view>
+      </view>
+      <!--<view class="p">还剩下 <span class="color day">6</span>天<span class="color hour">23</span>小时 发货</view>-->
+      <view class="btns">
+        <navigator url="../returnAddress/returnAddress?id={{info.Datail.Id}}" class="bigbtn">发货</navigator>
+      </view>
+    </view>
+  </view>
+  <!--<view class="choadd">-->
+  <!--<view class="name fl">收货人：{{Datail.Consignee}}</view>-->
+  <!--<span class="tel fl">{{Datail.Tel}}</span>-->
+  <!--<view class="clear"></view>-->
+  <!--<view class="add">收货地址：{{Datail.Address}}</view>-->
+  <!--</view>-->
+  <view class="refund-info" wx:if="{{info.Datail.ShippingName}}">
+    <view class="tit">退货详情</view>
+    <view class="p">物流公司：{{info.Datail.ShippingName}}</view>
+    <view class="p">物流单号：{{info.Datail.ShippingNo}}</view>
+    <view class="p">退货说明：{{info.Datail.ShippingMemo}}</view>
+  </view>
+  <view class="pro-style">
+    <view class="img" style="background-image: url({{info.Goods.MainImage.SmallThumbnail}})"></view>
+    <view class="info">
+      <view class="name">{{info.Goods.GoodsName}}</view>
+      <view class="color">
+        <view>{{info.Goods.GoodsAttribute}}</view>
+      </view>
+    </view>
+    <view class="num">
+      <view class="price">¥ {{info.Goods.Price}}</view>
+      <view class="number">x {{info.Goods.Quantity}}</view>
+    </view>
+  </view>
+  <view class="refund">
+    <view class="linem">
+      <view class="tt">退款金额</view>
+      <view class="price">¥{{info.Datail.RefundAmount}}</view>
+    </view>
+    <view class="linem">
+      <view class="tt">退款原因</view>
+      <view class="reason">{{info.Datail.Reason}}</view>
+    </view>
+    <view class="seal succeed" style="background-image: url({{config.static_url+'img11.png'}})" wx:if="{{info.Datail.ReviewResult==1&&info.Datail.RefundStatus==3}}"></view>
+    <view class="seal faid" style="background-image: url({{config.static_url+'img12.png'}})" wx:if="{{info.Datail.ReviewResult==0&&info.Datail.RefundStatus==3}}"></view>
+    <view class="seal pass" style="background-image: url({{config.static_url+'img13.png'}})" wx:if="{{info.Datail.ReviewResult==1&&info.Datail.RefundStatus==2}}"></view>
+  </view>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

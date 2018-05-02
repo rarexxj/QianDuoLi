@@ -1,0 +1,123 @@
+/* pages/history/history.wxss */
+
+.history {
+    position: fixed;
+    top:0;
+    bottom:0;
+    width: 100%;
+}
+.history .time {
+    padding: 27rpx 0;
+    height: 36rpx;
+}
+.history .time span {
+    width: 90rpx;
+    height:36rpx;
+    background: #e6e6e6;
+    display: block;
+    border-radius: 7rpx;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24rpx;
+    line-height: 36rpx;
+    color: #666666;
+}
+.history .content .ul {
+
+}
+.history .content .li {
+    float: left;
+    width: 366rpx;
+    box-sizing: border-box;
+    margin-right: 9rpx;
+    margin-bottom: 10rpx;
+}
+.history .content navigator {
+    display: block;
+    padding: 40rpx 15rpx 15rpx 15rpx;
+    background: #fff;
+
+    position: relative;
+}
+.history .content .timen {
+    position: absolute;
+    font-size: 24rpx;
+    line-height: 30rpx;
+    color: #666;
+    right: 10rpx;
+    top: 15rpx;
+}
+.history .content .img {
+    height: 317rpx;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 20rpx;
+}
+.history .content .tt {
+    font-size: 24rpx;
+    line-height: 24rpx;
+    color: #666666;
+}
+.history .content .price {
+    font-family: 'Arial';
+    color: #e84608;
+    font-size: 24rpx;
+    line-height: 24rpx;
+    margin-top: 13rpx;
+}
+.history .delete {
+    position: absolute;
+    font-size: 24rpx;
+    line-height: 24rpx;
+    color: #999999;
+    right: 15rpx;
+    top: 30rpx;
+}
+.history .content .tt {
+    height: 30rpx;
+    line-height: 30rpx;
+    overflow: hidden;
+    margin-top: 10rpx;
+}
+
+
+.search-box .nothing {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 4;
+  background: #f7f7f7;
+  /*display: none;*/
+}
+
+.nothing .tb {
+  width: 151rpx;
+  height: 150rpx;
+  margin: 254rpx auto 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nothing .p {
+  font-size: 30rpx;
+  color: #666666;
+  line-height: 30rpx;
+  text-align: center;
+  margin-top: 69rpx;
+}
+.NoBnt {
+  width: 293rpx;
+  height: 86rpx;
+  display: block;
+  text-align: center;
+  font-size: 36rpx;
+  line-height: 86rpx;
+  color: #5BB3FF;
+  border: 1px solid #5BB3FF;
+  margin: 47rpx auto;
+  border-radius: 8rpx;
+}

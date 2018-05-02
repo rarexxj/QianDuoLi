@@ -1,0 +1,87 @@
+/* pages/article/article.wxss */
+
+.contentSecItemBox{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    background: #fff; 
+
+}
+.articleUrl{
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 1px solid #f2f2f2;
+}
+.itemImgSec{
+    width:178rpx;
+    height:144rpx;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 25rpx;
+}
+.itemSecTitle{
+    font-size:28rpx;
+    color: #333;
+    line-height: 1;
+    margin-bottom: 20rpx;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-top: 8rpx;
+}
+
+.itemSecInt{
+    font-size: 24rpx;
+    color: #313131;
+    white-space: nowrap;
+    display: block;
+    text-overflow: ellipsis;
+    line-height: 1;
+    margin-bottom:37rpx;
+    overflow: hidden;
+}
+.itemSecSeeNum{
+    background: url("../img/logo21.png") no-repeat left center;
+    background-size: 23rpx 17rpx;
+    padding-left: 36rpx;
+    margin-left: 15rpx;
+    display: block;
+    font-size: 18rpx;
+    color: #777;
+}
+.itemSecTime{
+    margin-left: 15rpx;
+    display: block;
+    font-size: 18rpx;
+    color: #777;
+}
+.itemSecPrice{
+    font-size:32rpx;
+    color:#ec1c1c;
+}
+.itemSecPrice i{
+    font-size: 22rpx;
+    color: #ec1c1c;
+    font-style: normal;
+    margin-right: 6rpx;
+}
+.noGoodsBox .noGoodsImg{
+    display: block;
+    margin:0 auto;
+    margin-top: 160rpx;
+    width:305rpx;
+    height: 359rpx;
+}
+.noGoodsWz{
+    font-size:28rpx;
+    color:#bbbbbb;
+    display: block;
+    text-align: center;
+}
+.itemWzMain{
+    width:476rpx;
+}

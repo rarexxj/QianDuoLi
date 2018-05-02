@@ -1,0 +1,62 @@
+<!--pages/serviceTime/serviceTime.wxml-->
+<view class="">
+  <view class="productsInfo">
+    <image class="proImg" src="{{info.Image[0].MediumThumbnail}}"></image>
+    <view class="proInfo">
+      <view class="title">{{info.Name}}</view>
+      <view class="timeLongBox">
+        <text class="timeLong">预约市场</text>1小时
+      </view>
+      <view class="orderTimeBox">
+        <text class="time">预约时间段</text>7:00-24:00
+      </view>
+      <view class="priceBox">
+        <text class="price">价格</text>￥{{info.Price}}
+      </view>
+    </view>
+  </view>
+  <view style="width:750rpx;height:20rpx;background:#f7f7fa"></view>
+  <view class="timeBox">
+    <view>
+      <view class="chioceTimeTitle">选择服务时间</view>
+    </view>
+    <view class="navBox">
+      <view class="topNav">
+        <view class="{{navIndex==1?'active':''}}" data-date="{{nowDate.dateTime}}" data-index="1" bindtap='chioceDate'>今天
+        <text>{{nowDate.month}}/{{nowDate.date}}</text>
+          <!-- <text>{{nowDate.month<10?'0'+nowDate.month:nowDate.month}}/{{nowDate.date<10?'0'+nowDate.date:nowDate.date}}</text> -->
+        </view>
+        <view class="{{navIndex==2?'active':''}}" data-date="{{othersDate.twoDay.dateTime}}" data-index="2" bindtap='chioceDate'>明天
+          <text>{{othersDate.twoDay.month}}/{{othersDate.twoDay.date}}</text>
+        </view>
+        <view class="{{navIndex==3?'active':''}}" data-date="{{othersDate.threeDay.dateTime}}" data-index="3" bindtap='chioceDate'>{{othersDate.threeDay.day}}
+          <text>{{othersDate.threeDay.month}}/{{othersDate.threeDay.date}}</text>
+        </view>
+        <view class="{{navIndex==4?'active':''}}" data-date="{{othersDate.fourDay.dateTime}}" data-index="4" bindtap='chioceDate'>{{othersDate.fourDay.day}}
+          <text>{{othersDate.fourDay.month}}/{{othersDate.fourDay.date}}</text>
+        </view>
+        <view class="{{navIndex==5?'active':''}}" data-date="{{othersDate.fiveDay.dateTime}}" data-index="5" bindtap='chioceDate'>{{othersDate.fiveDay.day}}
+          <text>{{othersDate.fiveDay.month}}/{{othersDate.fiveDay.date}}</text>
+        </view>
+        <view class="{{navIndex==6?'active':''}}" data-date="{{othersDate.sixDay.dateTime}}" data-index="6" bindtap='chioceDate'>{{othersDate.sixDay.day}}
+          <text>{{othersDate.sixDay.month}}/{{othersDate.sixDay.date}}</text>
+        </view>
+        <view class="{{navIndex==7?'active':''}}" data-date="{{othersDate.sevenDay.dateTime}}" data-index="7" bindtap='chioceDate'>{{othersDate.sevenDay.day}}
+          <text>{{othersDate.sevenDay.month}}/{{othersDate.sevenDay.date}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="timeMainBox">
+      <button class="timeBlock {{lastTimeIndex==idx?'active':''}} {{(!item.IsDisable&&!item.numDisable)?'':'no'}}" bindtap="chioceLastTime" wx:for="{{appoint.AppointmentTime}}" wx:for-index="idx" disabled="{{item.IsDisable||item.numDisable}}" data-index="{{idx}}" data-hourId="{{item.Id}}" data-hour="{{item.AppointmentTimeSlot}}">{{item.AppointmentTimeSlot}}</button>
+    </view>
+  </view>
+  <view class="submitBox">
+  <button class="submit" bindtap="submit">提交</button>
+  
+  </view>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

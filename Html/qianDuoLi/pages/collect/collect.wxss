@@ -1,0 +1,105 @@
+/* pages/collect/collect.wxss */
+
+.collection .box {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.collection .box .a {
+    display: flex;
+    background: #fff;
+    padding: 35rpx 15rpx 0;
+    height: 195rpx;
+    justify-content: space-between;
+}
+.collection .img {
+    width: 160rpx;
+    height: 160rpx;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.collection .info {
+    width: 520rpx;
+}
+.collection .tt {
+    font-size: 30rpx;
+    line-height: 36rpx;
+    color: #333;
+    height:68rpx;
+overflow:hidden;
+
+}
+.collection .zt {
+    width: 52rpx;
+    height: 37rpx;
+    margin-top:12rpx;
+}
+.collection .zt.invalid {
+    /* background: url() no-repeat; */
+    background-size: cover;
+}
+.collection .bot {
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.collection .price {
+    font-family: 'Arial';
+    color: #e84608;
+    font-size: 24rpx;
+    line-height: 24rpx;
+}
+.collection .price .int {
+    font-size: 30rpx;
+    line-height: 30rpx;
+    display: inline;
+}
+.collection .price .dec {
+    font-size: 24rpx;
+}
+.collection .delete {
+    font-size:24rpx;
+    line-height: 24rpx;
+    color: #999999;
+}
+
+
+.search-box .nothing {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 4;
+  background: #f7f7f7;
+  /*display: none;*/
+}
+
+.nothing .tb {
+  width: 151rpx;
+  height: 150rpx;
+  margin: 254rpx auto 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nothing .p {
+  font-size: 30rpx;
+  color: #666666;
+  line-height: 30rpx;
+  text-align: center;
+  margin-top: 69rpx;
+}
+.NoBnt {
+  width: 293rpx;
+  height: 86rpx;
+  display: block;
+  text-align: center;
+  font-size: 36rpx;
+  line-height: 86rpx;
+  color: #5BB3FF;
+  border: 1px solid #5BB3FF;
+  margin: 47rpx auto;
+  border-radius: 8rpx;
+}

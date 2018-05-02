@@ -1,0 +1,31 @@
+/* pages/aftersales/aftersales.wxss */
+
+.aftersales .back {
+  background-size: cover;
+  margin: 109rpx auto 0;
+  display: block;
+  width: 389rpx;
+  height: 389rpx;
+}
+
+.aftersales .backand {
+  background-size: cover;
+  margin: 118rpx auto 0;
+  display: block;
+  width: 389rpx;
+  height: 389rpx;
+}
+
+.submit {
+  width: 610rpx;
+  display: block;
+  height: 88rpx;
+  background: #5bb3ff;
+  font-size: 36rpx;
+  color: #fff;
+  margin: 77rpx auto 0;
+  border: 0;
+  border-radius: 7rpx;
+  text-align: center;
+  line-height: 88rpx;
+}

@@ -1,0 +1,57 @@
+<!--pages/comment/comment.wxml-->
+<view class="comment" id="main">
+  <view class="box" wx:for="{{info.OrderGoods}}" wx:for-index="indexOut" wx:for-item="itemOut">
+    <view class="pro-style">
+      <view class="proLeft">
+        <view class="img" style="background-image: url({{itemOut.Image.MediumThumbnail}})"></view>
+        <view class="info">
+          <view class="name">{{itemOut.GoodsName}}</view>
+          <view class="color">
+            <!-- <view class="span">{{itemOut.GoodsAttribute=='null'?'':itemOut.GoodsAttribute}}</view> -->
+          </view>
+        </view>
+      </view>
+      <view class="num">
+        <view class="price">¥ {{itemOut.ShopPrice}}</view>
+        <view class="number">x {{itemOut.Quantity}}</view>
+        <!--<view class="back">退款详情</view>-->
+      </view>
+    </view>
+    <view class="line">
+      <view class="tt">商品评分</view>
+      <view class="ul">
+        <view class="li" wx:for="{{stars}}" style="background-image:url({{itemOut.stars-1<item?config.static_url+'ico26.png':config.static_url+'ico27.png'}})" bindtap="clickStars" data-index="{{index}}" data-indexOut="{{indexOut}}"></view>
+      </view>
+    </view>
+    <view class="line">
+      <view class="tt">商品评价 </view>
+      <textarea class="textarea" bindinput="bindTextAreaInput" data-indexOut="{{indexOut}}" placeholder="如果满意，请给好评哦" maxlength='200' />
+      <view class="f-x"></view>
+      <view class="cal">
+        <view class="left">{{itemOut.eval?itemOut.eval.length:'0'}}</view>/200
+      </view>
+    </view>
+    <!-- <view class="imageBox">
+      <view class="imageTitle">上传图片</view>
+      <view class="imageInBox">
+        <image bindtap="upimg" class="upImage" src="{{config.static_url+'img15.png'}}" data-indexOut="{{indexOut}}"></image>
+        <block wx:for="{{itemOut.upImg}}" wx:key="index" wx:for-item="fimg" wx:for-index="findex" >
+          <view class='logoinfo'>
+            <text class='xxx' catchtap='xxx' data-index='{{findex}}' data-indexOut="{{indexOut}}">x</text>
+            <image src='{{fimg}}' data-index='{{findex}}'></image>
+          </view>
+        </block>
+      </view>
+    </view> -->
+  </view>
+  <view class="button-box">
+    <view class="block"></view>
+    <view class="submit button" bindtap="submit">确认提交</view>
+  </view>
+
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+  <view class="msg-box">{{msgTitle}}</view>
+</view>

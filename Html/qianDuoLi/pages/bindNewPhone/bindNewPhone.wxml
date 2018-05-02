@@ -1,0 +1,27 @@
+<!--pages/bindNewPhone/bindNewPhone.wxml-->
+<view class="login forget">
+    <!-- <view class="line ph">
+        <view class="span" style="background-image:url({{config.static_url+'ico12.png'}})">旧手机号</view>
+        <input type="number" bindinput='oldTelInput' id="oph" class="text" placeholder="请输入原手机号"/>
+    </view> -->
+    <!-- <view class="line yzm">
+        <view class="span" style="background-image:url({{config.static_url+'ico13.png'}})">验证码</view>
+        <input type="number" bindinput='messageInput' id="oyzm" class="yzminput" placeholder="请输入短信验证码"/>
+        <button  class="get"  bindtap="get" disabled="{{codeDis}}">{{phoneCode}}<text hidden="{{phoneCode == '获取验证码'}}">s</text></button>
+    </view> -->
+    <view class="line ph">
+        <view class="span" style="background-image:url({{config.static_url+'ico12.png'}})">新手机号</view>
+        <input type="number" id="nph" class="text" bindinput='newTelInput' placeholder="请输入新的手机号"/>
+    </view>
+    <view class="line yzm">
+        <view class="span" style="background-image:url({{config.static_url+'ico13.png'}})">验证码</view>
+        <input type="number" id="yzm" class="yzminput" bindinput='messageInput2'  placeholder="请输入短信验证码"/>
+        <button class="get2"  bindtap="get2" disabled="{{codeDis2}}">{{phoneCode2}}<text hidden="{{phoneCode2 == '获取验证码'}}">s</text></button>
+    </view>
+    <button bindtap='submit' class="submit">提交</button>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

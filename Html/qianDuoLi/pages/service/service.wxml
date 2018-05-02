@@ -1,0 +1,18 @@
+<!--pages/service/service.wxml-->
+<scroll-view bindscrolltolower="upLoad" class="scrollBox">
+  <view class="box">
+    <view class="mainBox">
+      <navigator url="../productsInfoService/productsInfoService?id={{item.Id}}" wx:for="{{info}}">
+        <image class="mainImg" src="{{item.Image.MediumThumbnail}}"></image>
+        <view class="contentBox">
+          <view class="name">{{item.Name}}</view>
+          <view class="price">￥{{item.ShopPrice}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</scroll-view>
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

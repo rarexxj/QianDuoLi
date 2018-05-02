@@ -1,0 +1,23 @@
+<!--pages/article/article.wxml-->
+<view class="noGoodsBox" wx:if="{{!info.length}}">
+  <image src="../../images/img1.png" alt="" class="noGoodsImg"></image>
+  <view class="noGoodsWz">木有文章哦~</view>
+</view>
+
+<sroll-view class="contentSecItemBox"  bindscrolltolower="upLoad">
+  <navigator url="../articleInfo/articleInfo?id={{item.Id}}" class="articleUrl" wx:for="{{info}}">
+    <view class="itemImgSec" style="background-image: url({{item.Images[0].SmallThumbnail}})"></view>
+    <view class="itemWzMain">
+      <view class="itemSecTitle">{{item.Title}}</view>
+      <view class="itemSecInt">{{item.Blurb==null?'':item.Blurb}}</view>
+      <view class="itemSecTips">
+        <view class="itemSecTime">{{item.CreateTime}}</view>
+      </view>
+    </view>
+  </navigator>
+</sroll-view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

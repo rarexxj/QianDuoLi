@@ -1,0 +1,30 @@
+<!--pages/apply/apply.wxml-->
+<view class="apply" id="apply">
+  <view class="line">
+    <view class="tt">退款类型</view>
+    <view class="type" wx:if="{{RefundType==0}}">仅退款</view>
+    <view class="type" wx:if="{{RefundType==1}}">退货并退款</view>
+  </view>
+  <view class="line">
+    <view class="tt required">退款金额</view>
+    <view class="priceLogo" style="background-image:url({{config.static_url+'ico39.png'}})"></view>
+    <input  type="number" bindconfirm="price" class="priceinput" value="{{mp}}" disabled/>
+  </view>
+  <view class="line f-cb">
+    <view class="reasonTop">
+      <view class="tt required">退款原因</view>
+      <textarea bindinput="reason" class="textarea" placeholder="请详细描述退款的原因" maxlength="200" />
+      <view class="cal">
+        <view class="span">{{fontSize}}</view>/200
+      </view>
+    </view>
+    
+  </view>
+  <view wx:if="{{type==1}}" class="submit" bindtap="servicesubmit">确认提交</view>
+  <view wx:else="" class="submit" bindtap="submit">确认提交</view>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

@@ -1,0 +1,189 @@
+/* pages/confirm/confirm.wxss */
+
+.productsInfo {
+  padding: 30rpx;
+  display: flex;
+  background: #fff;
+}
+
+.proImg {
+  width: 191rpx;
+  height: 191rpx;
+  border-radius: 12rpx;
+  margin-right: 30rpx;
+}
+
+.proInfo {
+  width: 470rpx;
+}
+
+.proInfo .title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  font-size: 36rpx;
+  color: #333;
+  margin-bottom: 28rpx;
+}
+
+.timeLongBox, .orderTimeBox {
+  font-size: 24rpx;
+  color: #333;
+}
+
+.priceBox {
+  font-size: 28rpx;
+  color: #e9585b;
+}
+.priceBox .price{
+  width: 160rpx;
+  display: inline-block;
+}
+.timeLongBox, .orderTimeBox {
+  margin-bottom: 12rpx;
+}
+
+.timeLong, .time{
+  width: 160rpx;
+  display: inline-block;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.confirm-order .line {
+    padding: 0 15rpx;
+    border-bottom: 1px solid #e8e8e8;
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+.confirm-order .line .tt {
+    font-size: 30rpx;
+    line-height: 86rpx;
+}
+.confirm-order .line .price {
+    font-size: 36rpx;
+    line-height: 86rpx;
+    color: #e84608;
+    font-family: 'Arial';
+}
+.confirm-order .line .price .amo {
+    font-size: 36rpx;
+    line-height: 30rpx;
+    font-family: 'Arial';
+    color: #e84608;
+    display: inline-block;
+}
+.numxx{
+
+}
+.body-view{
+  margin-top: 15rpx;
+}
+.confirm-order .line .w145 {
+    width: 155rpx;
+    float: left;
+}
+.confirm-order .line .text {
+    width: 530rpx;
+    height: 86rpx;
+    background: none;
+    border: 0;
+    font-size: 26rpx;
+    color: #999;
+    line-height: 86rpx;
+}
+.confirm-order .line.postage .price {
+    font-size: 30rpx;
+}
+.confirm-order .line.postage .price .dec {
+    font-size: 24rpx;
+}
+
+.shopcar.detailed {
+    padding-top: 20rpx;
+}
+.shopcar.detailed .box {
+    height: 217rpx;
+    padding: 30rpx 15rpx 0;
+    border-bottom: 1px solid #e8e8e8;
+    background: #fff;
+    position: relative;
+    display:flex;
+}
+.shopcar.detailed .info {
+    width: 420rpx;
+    margin-right: 15rpx;
+}
+.shopcar.detailed .info .tc{
+  display: flex;
+}
+.shopcar.detailed .img {
+    width: 200rpx;
+    height: 200rpx;
+}
+.shopcar.detailed .bot{
+  display: flex;
+  justify-content: space-between;
+}
+.shopcar.detailed .bot .num {
+    font-size: 30rpx;
+    line-height: 30rpx;
+    color: #333;
+}
+.shopcar.detailed .bot .num {
+    display: inline-block;
+}
+    
+.pro-list.pro.detailed{
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 100rpx;
+}
+.pro-main{
+    height: 100vh;
+}
+.pro-list-box.swiper-wrapper{
+    height: auto;
+}
+.car-list {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 99rpx;
+    border-top: 1px solid #e8e8e8;
+    background: #3D3D3F;
+    display: flex;
+    justify-content: flex-end;
+}
+.car-list .hj {
+    line-height: 99rpx;
+    font-size: 28rpx;
+    color: #666;
+    padding-left: 15rpx;
+    margin-right: 20rpx;
+}
+.car-list .balance {
+    width: 188rpx;
+    height: 99rpx;
+    background: #5BB3FF;
+    font-size: 30rpx;
+    color: #fff;
+    text-align: center;
+    line-height: 99rpx;
+}
+.car-list .hj .price {
+    color: #FF8744;
+    font-family: 'Arial';
+    display: inline-block;
+    
+}
+.car-list .hj .amo {
+    font-size: 42rpx;
+    color: #FF8744;
+    display: inline-block;
+}

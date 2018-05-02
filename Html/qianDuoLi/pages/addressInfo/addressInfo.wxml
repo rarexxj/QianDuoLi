@@ -1,0 +1,36 @@
+<!--pages/addressInfo/addressInfo.wxml-->
+<view class="addaddress" id="main">
+    <view class="line f-cb">
+        <view class="span">收货人</view>
+        <input type="text" class="text" value="{{info.Contacts}}" disabled/>
+    </view>
+    <view class="line f-cb">
+        <view class="span">手机号</view>
+        <input type="text" class="text" value="{{info.Phone}}" disabled/>
+    </view>
+    <!--<view class="line f-cb">-->
+    <!--<span>邮政编码</span>-->
+    <!--<input type="text" class="text" :value="Postcode" disabled>-->
+    <!--</view>-->
+    <view class="line f-cb">
+        <view class="span">省市</view>
+        <input type="text" class="text" value="{{info.RegionName}}" disabled/>
+    </view>
+    <view class="line f-cb">
+        <view class="span">详细地址</view>
+        <input type="text" class="text" value="{{info.Address}}" disabled/>
+    </view>
+    <view class="button-box">
+        <view class="line delete button" bindtap="dels">删除收货地址</view>
+    </view>
+    <view class="button-box submit-box">
+        <view class="submit button" bindtap="setdef">设为默认地址</view>
+    </view>
+
+
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

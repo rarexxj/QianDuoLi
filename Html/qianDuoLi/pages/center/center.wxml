@@ -1,0 +1,156 @@
+<!--pages/center/center.wxml-->
+<view class="per-cen" id="main">
+  <view class="head">
+    <navigator url="../set/set">
+      <view class="img">
+        <image src="{{head?head:config.static_url+'img2.png'}}"></image>
+      </view>
+      <view class="info">
+        <view class="name">{{info.Member.NickName}}</view>
+        <view class="ph">{{info.Member.Phone}}</view>
+      </view>
+      <view class="jt2" style="background-image:url({{config.static_url+'ico5.png'}})"></view>
+    </navigator>
+  </view>
+  <!-- <view class="money">
+    <view class="left">
+      <navigator url="../wallet/wallet">
+        <view class="num">{{info.Money}}</view>
+        <view class="p">我的钱包(元)</view>
+      </navigator>
+    </view>
+     <view class="right">
+      <navigator url="URL+'integral.html'">
+        <view class="num">{{111}}</view>
+        <view class="p">我的积分(分)</view>
+      </navigator>
+    </view> 
+  </view> -->
+  <view class="myorder">
+    <view class="line">
+      <navigator url="../orderList/orderList">
+        <view class="tt">我的订单</view>
+        <view class="orderRight">
+          <view class="tc">查看全部订单</view>
+          <view class="jt" style="background-image: url({{config.static_url+'ico4.png'}})"></view>
+        </view>
+      </navigator>
+    </view>
+    <view class="list f-cb">
+      <navigator url="../orderList/orderList?type=1" class="pay" style="background-image: url({{config.static_url+'ico6.png'}})">
+        <view class="tt">待付款</view>
+        <view class="orderNumLogo" wx:if="{{info.PendingPayment!= 0}}">{{info.PendingPayment}}</view>
+      </navigator>
+      <navigator url="../orderList/orderList?type=2" class="get" style="background-image: url({{config.static_url+'ico7.png'}})">
+        <view class="tt">待收货</view>
+        <view class="orderNumLogo" wx:if="{{info.WaitingForReceiving != 0}}">{{info.WaitingForReceiving}}</view>
+      </navigator>
+      <navigator url="../orderList/orderList?type=3" class="evaluate" style="background-image: url({{config.static_url+'ico8.png'}})">
+        <view class="tt">待评价</view>
+        <view class="orderNumLogo" wx:if="{{info.WaitingForEvaluate != 0}}">{{info.WaitingForEvaluate}}</view>
+      </navigator>
+      <navigator url="../orderList/orderList?type=4" class="service" style="background-image: url({{config.static_url+'ico9.png'}})">
+        <view class="tt">退款/售后</view>
+        <view class="orderNumLogo" wx:if="{{info.HasRefund != 0}}">{{info.HasRefund}}</view>
+      </navigator>
+    </view>
+  </view>
+  <view class="line order">
+    <navigator url="../apporderList/apporderList">
+      <view class="tt">我的预约</view>
+      <view class="jt" style="background-image: url({{config.static_url+'ico4.png'}})"></view>
+    </navigator>
+  </view>
+  <view class="line mt20">
+    <navigator url="../wallet/wallet">
+      <view class="tt">我的钱包</view>
+      <view class="priceBox">
+        <view class="price">{{info.Money}}</view>
+        <view class="jt" style="background-image: url({{config.static_url+'ico4.png'}})"></view>
+      </view>
+
+    </navigator>
+  </view>
+  <view class="line">
+    <navigator url="../collect/collect">
+      <view class="tt">我的收藏</view>
+      <view class="jt" style="background-image: url({{config.static_url+'ico4.png'}})"></view>
+    </navigator>
+  </view>
+  <view class="line bb">
+    <navigator url="../history/history">
+      <view class="tt">浏览历史</view>
+      <view class="jt" style="background-image: url({{config.static_url+'ico4.png'}})"></view>
+    </navigator>
+  </view>
+  <view class="line bb last">
+    <navigator url="../aboutUs/aboutUs">
+      <view class="tt">关于我们</view>
+      <view class="jt" style="background-image: url({{config.static_url+'ico4.png'}})"></view>
+    </navigator>
+  </view>
+  <view class="line bb">
+    <button class="concat" open-type="contact">
+      <view class="tt">客服</view>
+      <view class="jt" style="background-image: url({{config.static_url+'ico4.png'}})"></view>
+    </button>
+  </view>
+
+  <view class="partner">
+    <view class="line bb">
+      <navigator url="../partner/partner">
+        <view class="tt">我的合伙人</view>
+        <view class="jt" style="background-image: url({{config.static_url+'ico4.png'}})"></view>
+      </navigator>
+    </view>
+    <view class="list">
+      <view class="partnerUl">
+        <view class="partnerLi">
+          <view class="partnerBox">
+            <view class="num">
+              <view class="partPrice">{{info.TodayIncome}}</view>元</view>
+            <view class="p">今日收入</view>
+          </view>
+        </view>
+        <view class="partnerLi">
+          <view class="partnerBox">
+            <view class="num">
+              <view class="partPrice">{{info.TotalIncome}}</view>元</view>
+            <view class="p">累计收入</view>
+          </view>
+        </view>
+        <view class="partnerLi">
+          <view class="partnerBox">
+            <view class="num">
+              <view class="partPrice">{{info.TeamCount}}</view>人</view>
+            <view class="p">我的团队</view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+  <view class="weixin">
+    <view class="logo" style="background-image: url({{config.static_url+'ico2.png'}}"></view>
+    <view class="info">
+      <view class="shopName">千多利商城</view>
+      <view class="tc">健康生活每一天</view>
+    </view>
+    <view class="att" bindtap="follow">点击关注服务号</view>
+  </view>
+  <view class="mask" wx:if="{{gz}}">
+    <view class="close" bindtap="layerClose" style="background-image: url({{config.static_url+'close.png'}}"></view>
+    <view class="box">
+      <view class="ewm">
+        <image src="{{config.static_url+'img14.jpg'}}" alt="" width="100%"></image>
+      </view>
+      <button class="saveBtn" bindtap="saveImgToPhotosAlbumTap">保存图片到手机相册</button>
+
+    </view>
+  </view>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+  <view class="msg-box">{{msgTitle}}</view>
+</view>

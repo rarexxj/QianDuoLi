@@ -1,0 +1,140 @@
+<!--pages/productsInfo/productsInfo.wxml-->
+<view id="main">
+  <view class="pro-info">
+    <view id="pro-info">
+      <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000" class="indexSwiper" indicator-active-color="#5BB3FF">
+        <block wx:for="{{info.Image}}">
+          <swiper-item>
+            <image src="{{item.MediumThumbnail}}" mode="aspectFill" class="slide-image {{item.urllink=='Goods'?'infourl':''}} {{item.urllink=='GoodsCategory'?'listurl':''}}" />
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="content">
+        <view class="name">{{info.Name}}</view>
+        <view class="price">
+          <view class="nowp">¥
+            <view class="int">{{info.ShopPrice}}</view>
+          </view>
+          <view class="old" wx:if="info.OriginalPrice != 0">价格
+            <view class="oldp">¥{{info.OriginalPrice}}</view>
+          </view>
+        </view>
+        <!-- <view class="freight">运费：¥0.00</view> -->
+        <view class="tips">
+          <view class="span" style="margin-right: 82rpx;background-image:url({{config.static_url+'ico33.png'}})">正品保障</view>
+          <view class="span" style="background-image:url({{config.static_url+'ico33.png'}})">七天内无理由放心退</view>
+        </view>
+      </view>
+
+    </view>
+    <view class="size" bindtap="csize">选择规格
+      <view></view>
+      <view class="sizeLogo" style="background-image:url({{config.static_url+'ico19.png'}})"></view>
+    </view>
+    <view class="information">
+      <view class="btns">
+        <view class="btn {{navIndex==1?'cur':''}}" bindtap="navClick" data-index="1">商品详情</view>
+        <view class="btn eva-btn {{navIndex==2?'cur':''}}" bindtap="navClick" data-index="2">销量和评价</view>
+      </view>
+      <view class="info">
+
+        <view class="infoajax" wx:if="{{navIndex==1}}">
+          <rich-text nodes="{{info.Description}}"></rich-text>
+        </view>
+        <scroll-view class="evaluateajax" wx:if="{{navIndex==2}}" scroll-y bindscrolltolower="upload">
+          <!-- <view class="memlist f-cb" id="head" wx:if="order9.length">
+            <view class="ul">
+              <view class="li" wx:for="headlist in order9" style="background-image:url({{headlist.Avatar?headlist.Avatar.SmallThumbnail:''}})"></view>
+
+            </view>
+          </view> -->
+          <view class="che-com" id="che_com">
+            <view class="content" wx:for="{{evaluateInfo}}">
+              <view class="top">
+                <view class="topBox">
+                  <view class="name" wx:if="{{item.IsAnonymity}}">匿名</view>
+                  <view class="name" wx:else="">{{item.Appraiser}}</view>
+                  <view class="starsBox">
+                    <view class="stars" style="background-image:url({{item.Score<1?config.static_url+'ico26.png':config.static_url+'ico27.png'}})"></view>
+                    <view class="stars" style="background-image:url({{item.Score<2?config.static_url+'ico26.png':config.static_url+'ico27.png'}})"></view>
+                    <view class="stars" style="background-image:url({{item.Score<3?config.static_url+'ico26.png':config.static_url+'ico27.png'}})"></view>
+                    <view class="stars" style="background-image:url({{item.Score<4?config.static_url+'ico26.png':config.static_url+'ico27.png'}})"></view>
+                    <view class="stars" style="background-image:url({{item.Score<5?config.static_url+'ico26.png':config.static_url+'ico27.png'}})"></view>
+                  </view>
+                </view>
+                <view class="time">{{item.Time}}</view>
+              </view>
+              <view class="words">{{item.Content}}</view>
+              <!-- <view class="img" wx:if="{{item.Files}}">
+                <image src="{{items.RelativePath}}" wx:for="{{item.Files}}" wx:for-item="items"></image>
+              </view> -->
+              <view class="reply" wx:if="{{item.ReplyContent}}">商家回复: {{item.ReplyContent}}
+                <view class="time">{{item.ReplyTime}}</view>
+                <view class="i" style="background-image:url({{config.static_url+'ico36.png'}})"></view>
+              </view>
+            </view>
+            <!-- <view class="che-more" wx:if="!evalmore" bindtap="evadata.pageNo++,moreeval()">点击加载更多评论</view> -->
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    <view style="width:100%;height:100rpx;"></view>
+    <view class="goshop">
+      <view class="coll" id="coll" bindtap="coll">
+        <view class="tb" style="background-image:url({{info.HasCollect?config.static_url+'ico38.png':config.static_url+'ico34.png'}})"></view>
+        <view class="span">收藏</view>
+      </view>
+      <view class="goshopc" bindtap="goshopc">
+        <view class="tb" style="background-image:url({{config.static_url+'ico35.png'}})"></view>
+        <view class="span">购物车</view>
+      </view>
+<!--客服  -->
+      <button class="talkAbout" open-type="contact">
+        <view class="talk" style="background-image:url({{config.static_url+'ico48.png'}})"></view>
+        <view class="span">客服</view>
+      </button>
+
+      <view class="addshopc" bindtap="addcart">加入购物车</view>
+      <view class="gobuy" bindtap="buy">立即购买</view>
+    </view>
+  </view>
+
+  <view class="size-mask" id="size_mask" wx:if="{{csize}}">
+    <view class="size-box">
+      <view class="size-info">
+        <view class="img" style="background-image: url({{guige.Image.SmallThumbnail}})"></view>
+        <view class="info">
+          <view class="price">¥{{guige.ShopPrice}}</view>
+          <view class="p">库存
+            <view class="kc">{{guige.Stock}}</view>件</view>
+          <view class="p">选择
+            <view wx:for="{{info.Attributes}}" class="typeWz">{{item.AttributeName}} </view>
+          </view>
+        </view>
+      </view>
+      <view class="tcbox">
+        <view class="tc first" wx:for='{{attrbuite}}' wx:for-item="attr" wx:for-index="idx">
+          <view class="tit">{{attr.name}}</view>
+          <view class="choose-box">
+            <view class="choose li {{item.btn?'choose-cur':''}}" bindtap="choose" wx:for="{{attr.list}}" data-AttributeId="{{attr.id}}" data-indexs="{{idx}}" data-Value="{{item.val}}" data-index="{{index}}" data-choosebtn="{{item.btn}}">{{item.val}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="getnum">
+        <view class="tit">数量</view>
+        <view class="numbox">
+          <view class="jian" style="background-image:url({{config.static_url+'ico16.jpg'}})" bindtap="jian"></view>
+          <input type="text" class="amount" bindinput="num" disabled value="{{num}}" />
+          <view class="jia" style="background-image:url({{config.static_url+'ico17.jpg'}})" bindtap="add"></view>
+        </view>
+      </view>
+      <view class="get-btn" bindtap="towhere">确定</view>
+      <view class="close" bindtap="closeLayer" style="background-image:url({{config.static_url+'ico37.png'}})"></view>
+    </view>
+  </view>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+  <view class="msg-box">{{msgTitle}}</view>
+</view>

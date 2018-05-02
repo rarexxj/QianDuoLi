@@ -1,0 +1,32 @@
+<!--pages/history/history.wxml-->
+<scroll-view class="history" id="main" scroll-y bindscrolltolower="upload">
+    <view class="delete" bindtap="del">清除浏览历史</view>
+    <view class="box">
+        <view class="time"></view>
+        <view class="content">
+            <view class="ul">
+              <view class="li" wx:for="{{info}}">
+                <navigator url="../productsInfo/productsInfo?id={{item.Id}}">
+                        <view class="img" style="background-image: url({{item.Image.MediumThumbnail}})"></view>
+                        <view class="tt">{{item.Name}}</view>
+                        <view class="price">¥{{item.ShopPrice}}</view>
+                        <view class="timen">{{item.BrowseTime}}</view>
+                   </navigator>
+              </view>
+            </view>
+        </view>
+    </view>
+    <view class="search-box" wx:if="{{!(info.length)}}">
+        <view class="nothing">
+            <view class="tb " style="background-image: url({{config.static_url+'img3.png'}})"></view>
+            <view class="p">暂无浏览历史</view>
+            <navigator url="../index/index" class="NoBnt" open-type="switchTab">随便逛逛</navigator>
+        </view>
+    </view>
+</scroll-view>
+
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

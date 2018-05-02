@@ -1,0 +1,114 @@
+<!--pages/partner/partner.wxml-->
+<view class="wallet">
+  <view class="walletTop">
+    <view class="moneyinfo" style="background-image:url({{config.static_url+'img8.png'}})">
+      <view class="tt">可提现余额(元)</view>
+      <view class="price">{{cashBag.Available}}</view>
+      <view>
+        <view></view>
+      </view>
+      <view class="wt">
+        <view class="wtTitle">
+          当前账户总金额(元)
+        </view>
+        <view class="wtPrice">{{cashBag.TotalMoney}}</view>
+        <view class="wtTitle">
+          提现中金额(元)
+        </view>
+        <view class="wtPrice">{{cashBag.Withdrawals}}</view>
+      </view>
+      <view catchtap='partPlan' class="parterPlan" style="background-image:url({{config.static_url+'ico46.png'}})">合伙人计划</view>
+      <!-- <navigator url="../partPlan/partPlan?id={{InvitationCode}}" class="parterPlan" style="background-image:url({{config.static_url+'ico46.png'}})">合伙人计划</navigator> -->
+      <view class="wd" bindtap='tiXian'>提现</view>
+      <!-- <navigator url="../withdrawals/withdrawals" class="wd">提现</navigator> -->
+    </view>
+  </view>
+  <view class="partner">
+    <view class="partnerUl">
+      <view class="partnerLi">
+        <view class="partnerBox">
+          <view class="num">
+            <view class="partPrice">{{center.TodayIncome}}</view>元</view>
+          <view class="p">今日收入</view>
+        </view>
+      </view>
+      <view class="partnerLi">
+        <view class="partnerBox">
+          <view class="num">
+            <view class="partPrice">{{center.TotalIncome}}</view>元</view>
+          <view class="p">累计收入</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="parterBox">
+    <view class="submit" bindtap="inv">邀请合作伙伴</view>
+  </view>
+  <view class="btns">
+    <view class="record btn {{showBtn==1?'cur':''}}" bindtap="choose" data-index="1">佣金记录</view>
+    <view class="team btn {{showBtn == 2?'cur':''}}" bindtap="choose" data-index="2">我的团队(
+      <view class="teamNum">{{parterInfo.length}}</view>)
+    </view>
+  </view>
+  <view class="content">
+    <view class="record-con" id="record_con" wx:if="{{showBtn==1}}">
+      <scroll-view class="ul" bindscrolltolower="comLoad">
+        <view wx:for="{{comInfo}}" class="li">
+          <view class="top">
+            <view class="num">{{item.Remark}}</view>
+            <view class="money">
+              <view class="span">+{{item.Money}}</view>元</view>
+          </view>
+          <view class="bot">
+            <view class="time fl">订单时间：{{item.CreateTime}}</view>
+            <view class="name fr">{{item.MemberName}}</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+     <view class="team-con" id="team_con" wx:if="{{showBtn==2}}"> 
+      <scroll-view class="ul" bindscrolltolower="parterLoad">
+        <view class="li" wx:for="{{parterInfo}}">
+          <view class="teamLiL">
+            <view class="img">
+              <image src="{{item.Avatar.RelativePath}}"></image>
+            </view>
+            <view class="info">
+              <view class="name">{{item.MemberName}}</view>
+            </view>
+          </view>
+          <view class="money">
+            <view class="span">+{{item.Money}}</view>元
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>
+
+<view class="mask" wx:if="{{showMask}}" bindtap='closeShow'>
+  <view class="box">
+    <image bindtap="previewImg" mode="scaleToFill" src="{{code}}" class="ewm"></image> 
+    <view class="p">
+      扫描二维码成为合伙人！
+    </view>
+  </view>
+</view>
+<view class="success" wx:if="{{showSuccess}}">
+  <view class="box">
+    <view class="tb failico" style="background-image:url({{config.static_url+'img7.png'}})"></view>
+    <view class="p">抱歉，只有在商城中购买过商品，才可以邀请合伙人</view>
+    <view class="goBox">
+      <navigator url="../index/index" class="goshopp" open-type="reLaunch">去购物</navigator>
+      <view class="wait" bindtap="wait">稍后再说</view>
+    </view>
+  </view>
+</view>
+<!-- <view class="canvas-box">
+  <canvas hidden="{{canvasHidden}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="mycanvas"/>
+</view> -->
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

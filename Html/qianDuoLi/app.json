@@ -1,0 +1,91 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logistics/logistics",
+    "pages/returnAddress/returnAddress",
+    "pages/afterInfo/afterInfo",
+    "pages/orderList/orderList",
+    "pages/aftersales/aftersales",
+    "pages/apply/apply",
+    "pages/apporderList/apporderList",
+    "pages/orderInfo/orderInfo",
+    "pages/apporderInfo/apporderInfo",
+    "pages/chooseAddress/chooseAddress",
+    "pages/serviceTime/serviceTime",
+    "pages/serviceConfirm/serviceConfirm",
+    "pages/partner/partner",
+    "pages/center/center",
+    "pages/partPlan/partPlan",
+    "pages/service/service",
+    "pages/address/address",
+    "pages/addressInfo/addressInfo",
+    "pages/addAddress/addAddress",
+    "pages/set/set",
+    "pages/productsList/productsList",
+    "pages/productsInfo/productsInfo",
+    "pages/kind/kind",   
+    "pages/productsInfoService/productsInfoService",
+    "pages/articleInfo/articleInfo",
+    "pages/collect/collect",
+    "pages/sex/sex",
+    "pages/bindNewPhone/bindNewPhone",
+    "pages/name/name",
+    "pages/birthday/birthday",
+    "pages/resetPassword/resetPassword",
+    "pages/history/history",
+    "pages/pay/pay",
+    "pages/searchList/searchList",
+    "pages/checkComment/checkComment",
+    "pages/comment/comment",
+    "pages/shopcar/shopcar",
+    "pages/withdrawals/withdrawals",
+    "pages/topup/topup",
+    "pages/wallet/wallet",
+    "pages/confirm/confirm",
+    "pages/article/article",
+    "pages/aboutUs/aboutUs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#5BB3FF",
+    "navigationBarTitleText": "千多利商城",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#7F8389",
+    "selectedColor": "#5BB3FF",
+    "borderStyle": "#F7F7FA",
+    "list": [
+      {
+        "selectedIconPath": "images/ico5.png",
+        "iconPath": "images/ico4.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/ico7.png",
+        "iconPath": "images/ico6.png",
+        "pagePath": "pages/kind/kind",
+        "text": "商品"
+      },
+      {
+        "selectedIconPath": "images/ico9.png",
+        "iconPath": "images/ico8.png",
+        "pagePath": "pages/service/service",
+        "text": "服务"
+      },
+      {
+        "selectedIconPath": "images/ico11.png",
+        "iconPath": "images/ico10.png",
+        "pagePath": "pages/shopcar/shopcar",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "images/ico13.png",
+        "iconPath": "images/ico12.png",
+        "pagePath": "pages/center/center",
+        "text": "我的"
+      }
+    ]
+  }
+}

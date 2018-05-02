@@ -1,0 +1,438 @@
+/* pages/center/center.wxss */
+
+.per-cen {
+  background: #f5f5f5;
+}
+
+.per-cen .head navigator {
+  display: flex;
+  background: #5bb3ff;
+  height: 128rpx;
+  padding: 26rpx 15rpx;
+}
+
+.per-cen .head navigator .img {
+  width: 120rpx;
+  height: 120rpx;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 4rpx solid #fff;
+}
+
+.per-cen .head navigator .img image {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.per-cen .head navigator .info {
+  padding-left: 31rpx;
+  color: #fff;
+  width: 580rpx;
+  line-height: 54rpx;
+  padding-top: 13rpx;
+}
+
+.per-cen .head navigator .name {
+  font-size: 36rpx;
+  width: 400rpx;
+  color: #fff;
+}
+
+.per-cen .head navigator .ph {
+  font-size: 28rpx;
+  color: #fff;
+}
+
+.per-cen .head navigator .jt2 {
+  width: 19rpx;
+  height: 32rpx;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 40rpx;
+}
+
+.per-cen .money {
+  background: #fff;
+  line-height: 39rpx;
+  text-align: center;
+  display: flex;
+}
+
+.per-cen .money .yuan {
+  font-size: 24rpx;
+  line-height: 24rpx;
+}
+
+.per-cen .money navigator {
+  display: block;
+  color: #333;
+}
+
+.per-cen .money .left {
+  width: 100%;
+  height: 129rpx;
+  /* border-right: 1px solid #e8e8e8; */
+  border-bottom: 1px solid #e8e8e8;
+  box-sizing: border-box;
+  padding-top: 30rpx;
+  color: #333;
+}
+
+.per-cen .money .right {
+  width: 50%;
+  height: 129rpx;
+  border-bottom: 1px solid #e8e8e8;
+  box-sizing: border-box;
+  padding-top: 30rpx;
+  color: #333;
+}
+
+.per-cen .money .num {
+  font-size: 36rpx;
+}
+
+.per-cen .money .p {
+  font-size: 24rpx;
+}
+
+.per-cen .myorder {
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.per-cen .myorder .list {
+  border-bottom: 1px solid #e8e8e8;
+  border-top: 1px solid #e8e8e8;
+  display: flex;
+}
+
+.per-cen .myorder .list navigator {
+  display: block;
+  width: 25%;
+  height: 128rpx;
+  border-right: 1px solid #e8e8e8;
+  box-sizing: border-box;
+  padding-top: 82rpx;
+  text-align: center;
+  color: #333;
+  position: relative;
+}
+
+.per-cen .myorder .list .tt {
+  font-size: 24rpx;
+  line-height: 24rpx;
+}
+
+.per-cen .myorder .list .orderNumLogo {
+  width: 30rpx;
+  height: 30rpx;
+  text-align: center;
+  line-height: 30rpx;
+  border-radius: 50%;
+  font-size: 20rpx;
+  color: #fff;
+  background: #e84608;
+  position: absolute;
+  top: 19rpx;
+  right: 36rpx;
+  font-style: normal;
+}
+
+.per-cen .myorder .pay {
+  background-size: 44rpx 33rpx;
+  background-repeat: no-repeat;
+  background-position: center 30rpx;
+}
+
+.per-cen .myorder .get {
+  background-size: 38rpx 32rpx;
+  background-repeat: no-repeat;
+  background-position: center 30rpx;
+}
+
+.per-cen .myorder .evaluate {
+  background-size: 33rpx 33rpx;
+  background-repeat: no-repeat;
+  background-position: center 30rpx;
+}
+
+.per-cen .myorder .service {
+  background-size: 33rpx 32rpx;
+  background-repeat: no-repeat;
+  background-position: center 30rpx;
+}
+
+.per-cen .line navigator {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15rpx;
+  height: 93rpx;
+  border-top: 1px solid #e8e8e8;
+  background: #fff;
+  z-index: 1;
+}
+
+.per-cen .line.last navigator {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.per-cen .line .concat {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15rpx;
+  height: 93rpx;
+  background: #fff;
+  z-index: 1;
+  border: 0;
+}
+
+.per-cen .line .concat::after {
+  border: 0;
+}
+
+.per-cen .line.order navigator {
+  border-top: none;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.per-cen .line.mt20 {
+  margin-top: 20rpx;
+}
+
+.per-cen .line .tt {
+  font-size: 30rpx;
+  color: #333;
+  line-height: 93rpx;
+}
+
+.per-cen .line .price {
+  font-size: 30rpx;
+  color: #333;
+  line-height: 93rpx;
+}
+
+.per-cen .line .priceBox {
+  display: flex;
+}
+
+.per-cen .line .jt {
+  width: 13rpx;
+  height: 24rpx;
+  background-size: 13rpx 24rpx;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 34rpx;
+  margin-left: 20rpx;
+}
+
+.per-cen .line .orderRight {
+  display: flex;
+}
+
+.per-cen .tc {
+  font-size: 24rpx;
+  color: #999;
+  line-height: 93rpx;
+}
+
+.per-cen .partner {
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.per-cen .partner .partnerUl {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid #e8e8e8;
+  justify-content: space-between;
+}
+
+.per-cen .partner .partnerLi {
+  width: 33%;
+  border-right: 1px solid #e8e8e8;
+  border-top: 1px solid #e8e8e8;
+  height: 130rpx;
+  text-align: center;
+  line-height: 36rpx;
+}
+
+.per-cen .partner .partnerLi:last-child {
+  border-right: none;
+}
+
+.per-cen .partner .partnerBox {
+  display: block;
+  background: #fff;
+  height: 130rpx;
+  width: 100%;
+  color: #333;
+  box-sizing: border-box;
+  padding-top: 33rpx;
+}
+
+.per-cen .partner .num {
+  font-size: 24rpx;
+  line-height: 24rpx;
+}
+
+.per-cen .partner .num .partPrice {
+  font-size: 36rpx;
+  line-height: 36rpx;
+  display: inline-block;
+}
+
+.per-cen .partner .p {
+  font-size: 24rpx;
+}
+
+.per-cen .weixin {
+  margin-top: 20rpx;
+  border-bottom: 1px solid #e8e8e8;
+  border-top: 1px solid #e8e8e8;
+  padding: 16rpx 15rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.per-cen .weixin .logo {
+  width: 102rpx;
+  height: 102rpx;
+  background-size: cover;
+}
+
+.per-cen .weixin .info {
+  padding-left: 27rpx;
+  width: 400rpx;
+}
+
+.per-cen .weixin .shopName {
+  font-size: 36rpx;
+  line-height: 50rpx;
+  padding-top: 3rpx;
+  color: #333;
+}
+
+.per-cen .weixin .tc {
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #999;
+}
+
+.per-cen .weixin .att {
+  width: 217rpx;
+  height: 69rpx;
+  background: #5bb3ff;
+  font-size: 24rpx;
+  line-height: 69rpx;
+  color: #fff;
+  text-align: center;
+  border-radius: 8rpx;
+  margin-top: 16rpx;
+}
+
+.mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 30;
+}
+
+.mask .close {
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  width: 60rpx;
+  height: 60rpx;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(img/close.png);
+}
+
+.mask .box {
+  margin-top: 236rpx;
+  position: relative;
+}
+
+.mask .ewm {
+  width: 253rpx;
+  height: 253rpx;
+  background: #fff;
+  padding: 20rpx;
+  margin: 0 auto;
+}
+
+.mask .ewm image {
+  width: 253rpx;
+  height: 253rpx;
+}
+
+.mask .p {
+  font-size: 36rpx;
+  line-height: 48rpx;
+  color: #fff;
+  text-align: center;
+  margin-top: 44rpx;
+}
+
+.mask .num {
+  font-size: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  margin-top: 22rpx;
+  color: #fff;
+  display: block;
+}
+
+.mask .copy {
+  width: 195rpx;
+  height: 61rpx;
+  border-radius: 8rpx;
+  margin: 30rpx auto 0;
+  background: #fff;
+  line-height: 61rpx;
+  text-align: center;
+  color: #78a000;
+  font-size: 30rpx;
+  display: block;
+  border: 0;
+}
+
+.mask .paybox {
+  width: 440rpx;
+  margin: 30rpx auto 0;
+}
+
+.mask .paybox .img {
+  width: 256rpx;
+  height: 221rpx;
+  margin-left: 184rpx;
+  background: url("img/img42.png") no-repeat;
+  background-size: cover;
+}
+
+.mask .paybox .tips {
+  font-size: 36rpx;
+  line-height: 48rpx;
+  color: #fff;
+  margin-top: 45rpx;
+}
+
+.saveBtn {
+  width: 300rpx;
+  height: 69rpx;
+  background: #5bb3ff;
+  font-size: 24rpx;
+  line-height: 69rpx;
+  color: #fff;
+  text-align: center;
+  border-radius: 8rpx;
+  margin: 0 auto;
+  margin-top: 40rpx;
+}

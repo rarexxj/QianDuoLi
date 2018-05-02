@@ -1,0 +1,184 @@
+/* pages/withdrawals/withdrawals.wxss */
+
+.tixianPriceBox {
+  display: flex;
+}
+
+body {
+  background: #fff;
+}
+
+.tixian .wz {
+  line-height: 95rpx;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.cardBox {
+  padding: 0 20rpx;
+}
+
+.cardBox .wz {
+  margin-right: 20rpx;
+  display: block;
+}
+
+.cardBox input {
+  height: 120rpx;
+  font-size: 30rpx;
+  color: #666;
+  width: 500rpx;
+  display: block;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.payTypeSelect {
+  font-size: 30rpx;
+  color: #666;
+  height: 120rpx;
+  background: #fff;
+}
+
+.payTypeName {
+  font-size: 30rpx;
+  color: #666;
+  height: 120rpx;
+  line-height: 120rpx;
+  width: 200rpx;
+}
+
+.cardBoxLine {
+  display: flex;
+}
+.picker {
+  display: flex;
+  width: 500rpx;
+}
+.cardBoxLine .picker{
+  font-size: 30rpx;
+  color: #666;
+  height: 120rpx;
+  line-height: 120rpx;
+  width:500rpx;
+}
+.priceLogo {
+  font-size: 72rpx;
+  color: #666;
+  line-height: 100rpx;
+}
+.price {
+  -webkit-appearance: none;
+  height: 100rpx;
+  font-size: 72rpx;
+  color: #666;
+  width: 400rpx;
+}
+
+.tixianBox {
+  margin-left: 20rpx;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 30rpx;
+}
+
+.canTixian {
+  font-size: 28rpx;
+  color: #888;
+  line-height: 80rpx;
+  padding-left: 20rpx;
+}
+
+.tips {
+  padding-left: 20rpx;
+  display: flex;
+}
+
+.tips .tip {
+  font-size: 24rpx;
+  color: #999;
+  line-height: 42rpx;
+  width: 640rpx;
+}
+
+.tips .logo {
+  background-repeat:no-repeat;
+  background-position:center;
+  width: 37rpx;
+  height: 37rpx;
+  background-size: cover;
+  margin-right: 15rpx;
+}
+
+.next {
+  width: 700rpx;
+  height: 90rpx;
+  margin: 0 auto;
+  display: block;
+  font-size: 34rpx;
+  color: #fff;
+  background: #99ccf2;
+  border-radius: 8rpx;
+  text-align: center;
+  line-height: 90rpx;
+  margin-top: 50rpx;
+}
+
+.tixianLayer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: #fff;
+  display: none;
+}
+
+.tixianLayer.show {
+  display: block;
+}
+
+.yzBox {
+  padding: 0 20rpx 0 20rpx;
+}
+
+.layerWz {
+  line-height: 100rpx;
+  width: 140rpx;
+  font-size: 28rpx;
+}
+
+.layerWz2 {
+  line-height: 100rpx;
+  width: 208rpx;
+  background: #fff;
+  text-align: center;
+  font-size: 28rpx;
+}
+.telBox{
+  display: flex;
+  justify-content: space-between;
+}
+.yanzm {
+  height: 100rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.shu {
+  width: 2rpx;
+  height: 60rpx;
+  background: #e8e8e8;
+  margin-top: 20rpx;
+}
+
+.get2 {
+    width: 170rpx;
+    height: 60rpx;
+    background: #5BB3FF;
+    color: #fff;
+    font-size: 26rpx;
+    border-radius: 8rpx;
+    line-height: 60rpx;
+    text-align: center;
+    margin-top: 20rpx;
+}

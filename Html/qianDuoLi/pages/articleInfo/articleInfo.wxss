@@ -1,0 +1,43 @@
+/* pages/articleInfo/articleInfo.wxss */
+page{
+  background: #fff;
+}
+.infoDetailBox{
+    padding:33rpx 0 30rpx 0;
+}
+.infoDetailTitle{
+    font-size:40rpx;
+    color:#2a2a2a;
+    text-align: center;
+    margin-bottom: 20rpx;
+}
+.detailTipsBox{
+    text-align: center;
+}
+.titDetailContent{
+    padding:20rpx;
+    display: block;
+}
+.titDetailContent img{
+    max-width:710rpx;
+}
+.guwName{
+    background-size: 19rpx 21rpx;
+    padding-left:27rpx;
+    margin-right: 26rpx;
+    font-size:24rpx;
+    color: #999;
+}
+.infoTime{
+    background-size: 19rpx 18rpx;
+    padding-left:27rpx;
+    margin-right: 26rpx;
+    font-size: 24rpx;
+    color: #999;
+}
+.infoSeeNum{
+    background-size: 23rpx 17rpx;
+    padding-left:27rpx;
+    font-size: 24rpx;
+    color: #999;
+}

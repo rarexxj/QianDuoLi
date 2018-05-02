@@ -1,0 +1,121 @@
+/* pages/apply/apply.wxss */
+
+.apply .line {
+  padding: 0 15rpx;
+  border-bottom: 1rpx solid #e8e8e8;
+  background: #fff;
+  line-height: 88rpx;
+  display: flex;
+}
+
+.apply .text {
+  width: 420rpx;
+  height: 88rpx;
+  font-size: 26rpx;
+  color: #999;
+  border: 0;
+  background: none;
+  float: left;
+}
+
+.apply .line.disabled {
+  background: #f7f7f7;
+}
+
+.apply .tt {
+  width: 159rpx;
+  float: left;
+  font-size: 30rpx;
+  color: #333;
+  padding-left: 20rpx;
+}
+
+.apply .tt.required {
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 10rpx 10rpx;
+}
+
+.apply .time {
+  font-size: 26rpx;
+  line-height: 26rpx;
+  color: #333;
+  margin-top: 33rpx;
+  padding-left: 15rpx;
+}
+
+.apply .time span {
+  color: #78a000;
+}
+
+.apply .type {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.apply .price {
+  font-size: 26rpx;
+  color: #e84608;
+}
+
+.apply .textarea {
+  width: 540rpx;
+  font-size: 26rpx;
+  line-height: 30rpx;
+  color: #999;
+  height: 155rpx;
+  background: none;
+  border: 0;
+  padding: 30rpx 0;
+}
+
+.apply .cal {
+  font-size: 26rpx;
+  line-height: 34rpx;
+  color: #999;
+  padding-bottom: 8rpx;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.apply .cal .span {
+  display: inline-block;
+}
+
+.apply .submit {
+  width: 610rpx;
+  display: block;
+  height: 88rpx;
+  background: #5bb3ff;
+  font-size: 36rpx;
+  color: #fff;
+  margin: 77rpx auto 0;
+  border: 0;
+  border-radius: 7rpx;
+  text-align: center;
+  line-height: 88rpx;
+}
+
+.apply .priceinput {
+  padding-left: 20rpx; 
+  width: 400rpx;
+  font-size: 26rpx;
+  color: #e84608;
+  border: 0;
+  height: 88rpx;
+  box-sizing: border-box;
+}
+
+.apply .priceLogo{
+  width: 17rpx;
+  background-size: 17rpx 21rpx;
+  background-repeat:no-repeat;
+  background-position:center;
+  height: 88rpx;
+  display: inline-block;
+}
+.apply .reasonTop {
+  display: flex;
+  position: relative;
+}

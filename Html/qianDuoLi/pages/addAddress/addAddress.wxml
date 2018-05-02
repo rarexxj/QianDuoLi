@@ -1,0 +1,38 @@
+<!--pages/addAddress/addAddress.wxml-->
+<view class="addaddress" id="main">
+  <view class="line">
+    <view class="span">收货人</view>
+    <input type="text" bindinput='name' class="text use" placeholder="请输入收货人姓名" />
+  </view>
+  <view class="line ">
+    <view class="span">手机号</view>
+    <input type="number" bindinput="phone" class="text ph" placeholder="请输入手机号码" />
+  </view>
+  <view class="line">
+    <view class="span">邮政编码</view>
+    <input type="text " class="text postcode" bindinput="zipCode" placeholder="请输入邮政编码" />
+  </view>
+  <view class="line">
+    <view class="span">省市区</view>
+     <picker scroll-y mode="region" bindchange="bindRegionChange" >
+      <view class="picker">
+        <view class="text postcode" wx:if="{{!region}}">请选择省市区</view>
+        <view class="text postcode" wx:else="">{{region[0]}}{{region[1]}}{{region[2]}}</view>
+      </view>
+    </picker> 
+    
+    
+  </view>
+  <view class="line madd ">
+    <view class="span">详细地址</view>
+    <textarea name="" class="textarea " bindinput="addressInfo" placeholder="例如xx路xx号"></textarea>
+  </view>
+  <view class="button-box submit-box ">
+    <view class="submit button " bindtap="submit">保存</view>
+  </view>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

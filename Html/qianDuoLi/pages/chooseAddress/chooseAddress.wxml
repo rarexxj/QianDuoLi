@@ -1,0 +1,24 @@
+<!--pages/address/address.wxml-->
+
+<view class="address" id="main">
+  <view class="addlist {{item.IsDefault ? 'first':''}}" wx:for="{{info}}" bindtap='chooseAddress' data-addid="{{item.Id}}">
+    <view class="chooseA">
+      <view class="minfo">
+        <view class="name">收货人：{{item.Contacts}}</view>
+        <view class="ph">{{item.Phone}}</view>
+      </view>
+      <view class="add" wx:if="{{item.IsDefault}}">[默认]收货地址：{{item.RegionName}}{{item.Address}}</view>
+      <view class="add" wx:else="">收货地址：{{item.RegionName}}{{item.Address}}</view>
+    </view>
+  </view>
+  <view class="button-box add-addr">
+    <navigator wx:if="{{id}}" class="submit button" url="../addAddress/addAddress?id={{id}}" open-type="navigate">添加新地址</navigator>
+    <navigator wx:if="{{gid}}" class="submit button" url="../addAddress/addAddress?gid={{gid}}" open-type="navigate">添加新地址</navigator>
+  </view>
+
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

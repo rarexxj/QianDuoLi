@@ -1,0 +1,25 @@
+/* pages/birthday/birthday.wxss */
+button {
+  width: 610rpx;
+  display: block;
+  height: 88rpx;
+  background: #5BB3FF;
+  font-size: 36rpx;
+  color: #fff;
+  margin: 77rpx auto 0;
+  border: 0;
+  border-radius: 7rpx;
+  text-align: center;
+  line-height: 88rpx;
+}
+.birthday {
+    margin-top: 20rpx;
+    border-top: 1px solid #e8e8e8;
+}
+.birthday .line {
+    padding: 0 15rpx;
+    background: #fff;
+    height: 88rpx;
+    line-height: 88rpx;
+    border-bottom: 1px solid #e8e8e8;
+}

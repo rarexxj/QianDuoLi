@@ -1,0 +1,56 @@
+/* pages/addressInfo/addressInfo.wxss */
+.addaddress {
+    border-top: 1rpx solid #e8e8e8;
+}
+.addaddress .line {
+    padding: 0 15rpx;
+    background: #fff;
+    height: 88rpx;
+    line-height: 88rpx;
+    border-bottom: 1rpx solid #e8e8e8;
+}
+.addaddress .span {
+    float: left;
+    height: 88rpx;
+    width: 158rpx;
+    font-size:30rpx;
+    color: #333333;
+}
+.addaddress .text {
+    width: 452rpx;
+    height: 88rpx;
+    background: none;
+    border: 0;
+    font-size: 26rpx;
+    line-height: 88rpx;
+    color: #999;
+}
+.addaddress .line.delete {
+    color: #5BB3FF;
+    margin-top: 20rpx;
+    border-top: 1rpx solid #e8e8e8;
+    font-size: 30rpx;
+}
+.addaddress .line {
+    padding: 0 15rpx;
+    background: #fff;
+    height: 88rpx;
+    line-height: 88rpx;
+    border-bottom:1rpx solid #e8e8e8;
+}
+.submit {
+    display: block;
+    width: 100%;
+    height: 88rpx;
+    background: #5BB3FF;
+    font-size: 36rpx;
+    color: #fff;
+    margin:77rpx auto 0;
+    border: 0;
+    border-radius:7rpx;
+    text-align: center;
+    line-height: 88rpx;
+}
+.addaddress .submit {
+    width: 610rpx;
+}

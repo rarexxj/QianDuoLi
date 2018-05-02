@@ -1,0 +1,164 @@
+/* pages/addAddress/addAddress.wxss */
+@import '../../addLinkage/addLinkage.wxss';
+
+.addaddress {
+  margin-top: 20rpx;
+  border-top: 1px solid #e8e8e8;
+}
+
+.addaddress .date {
+  width: 610rpx;
+  height: 88rpx;
+  border: 0;
+  font-size: 30rpx;
+}
+
+.addaddress .line {
+  padding: 0 15rpx;
+  background: #fff;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+}
+
+.addaddress .span {
+  height: 88rpx;
+  width: 158rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.addaddress .text {
+  width: 452rpx;
+  height: 88rpx;
+  background: none;
+  border: 0;
+  font-size: 26rpx;
+  line-height: 88rpx;
+  color: #777;
+}
+
+.addaddress .text:disabled {
+  opacity: 1;
+  color: #333;
+}
+
+.addaddress .text2 {
+  height: 88rpx;
+  width: 100%;
+  background: none;
+  border: 0;
+  font-size: 26rpx;
+  line-height: 88rpx;
+  color: #999;
+}
+
+.addaddress .csex {
+  height: 88rpx;
+  font-size: 26rpx;
+  line-height: 88rpx;
+  color: #999;
+  width: 100%;
+  border: 0;
+  background: none;
+  -webkit-appearance: none;
+}
+
+.addaddress .cday {
+  width: 33%;
+  padding-left: 10%;
+  float: left;
+  height: 88rpx;
+  font-size: 26rpx;
+  line-height: 88rpx;
+  color: #999;
+  border: 0;
+  background: none;
+}
+
+.addaddress .line.delete {
+  color: #78a000;
+  margin-top: 20rpx;
+  border-top: 1px solid #e8e8e8;
+  font-size: 30rpx;
+}
+
+.addaddress .submit {
+  width: 610rpx;
+  display: block;
+  height: 88rpx;
+  background: #5bb3ff;
+  font-size: 36rpx;
+  color: #fff;
+  margin: 77rpx auto 0;
+  border: 0;
+  border-radius: 7rpx;
+  text-align: center;
+  line-height: 88rpx;
+}
+
+.addaddress .select {
+  float: left;
+  width: 200rpx;
+  height: 88rpx;
+  margin-right: 20rpx;
+  line-height: 88rpx;
+  background: none;
+  border: 0;
+  font-size: 26rpx;
+  color: #999;
+  -webkit-appearance: none;
+}
+
+.addaddress .line.madd {
+  height: 163rpx;
+}
+
+.addaddress .textarea {
+  width: 440rpx;
+  height: 160rpx;
+  background: none;
+  border: 0;
+  font-size: 26rpx;
+  line-height: 34rpx;
+  color: #999;
+  box-sizing: border-box;
+  padding-top: 27rpx;
+}
+
+.addaddress .sex {
+  padding-left: 70rpx;
+  width: 40rpx;
+  height: 40rpx;
+  background-size: 40rpx 40rpx;
+  height: 88rpx;
+  font-size: 30rpx;
+}
+
+.addaddress .sex.sexman {
+  margin-right: 100rpx;
+}
+
+.addaddress .sex.cur {
+  background-size: 40rpx 40rpx;
+}
+
+.add-addr {
+  margin-top: 30rpx;
+}
+
+.submit-box {
+  margin-top: 30rpx;
+}
+
+.addressBox text{
+  font-size: 26rpx;
+  color: #666;
+}
+
+.pickerBox{
+
+}
+
+

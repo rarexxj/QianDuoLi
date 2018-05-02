@@ -1,0 +1,122 @@
+<!--pages/confirm/confirm.wxml-->
+<view class="confirm-order" id="main">
+  <view class="choadd" wx:if="{{info.Addresses}}" bindtap="toaddr" style="background-image:url({{config.static_url+'img4.jpg'}})">
+    <view class="a" style="background-image:url({{config.static_url+'ico18.png'}})">
+      <view class="lianxi">
+        <view class="name">收货人：{{submitData.Consignee}}</view>
+        <view class="tel">{{submitData.Tel}}</view>
+      </view>
+      <view class="add">收货地址：{{submitData.RegionName}} {{submitData.Address}}</view>
+      <view class="i" style="background-image:url({{config.static_url+'ico19.png'}})"></view>
+    </view>
+  </view>
+  <view class="addadd" wx:else="" bindtap="toaddr" style="background-image:url({{config.static_url+'img5.jpg'}})">
+    <view class="a">
+      <view class="tt" style="background-image:url({{config.static_url+'ico20.png'}})">请添加收货地址</view>
+    </view>
+  </view>
+
+  <view class="shopcar detailed" wx:for="{{info.Goods.List}}" bindtap="topro" data-id="{item.GoodsId}}">
+    <view class="box">
+      <view class="img" style="background-image: url({{item.Image.MediumThumbnail}})"></view>
+      <view class="info">
+        <view class="tt">{{item.GoodsName}}</view>
+        <view class="tc">
+          <view class="int">
+            <view>{{item.GoodsAttribute}}</view>
+          </view>
+        </view>
+        <view class="bot">
+          <view class="price">¥
+            <view class="amo">{{item.ShopPrice}}</view>
+          </view>
+          <view class="num">x
+            <view class="numxx">{{item.Quantity}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- <view class="shopcar detailed" wx:if="{{info.Goods.List.length == 1}}" bindtap="topro" data-id="{{info.Goods.List[0].GoodsId}}">
+    <view class="box">
+      <view class="img" style="background-image: url({{info.Goods.List[0].Image.MediumThumbnail}})"></view>
+      <view class="info">
+        <view class="tt">{{info.Goods.List[0].GoodsName}}</view>
+        <view class="tc">
+          <view class="int">
+            <view>{{info.Goods.List[0].GoodsAttribute}}</view>
+          </view>
+        </view>
+        <view class="bot">
+          <view class="price">¥
+            <view class="amo">{{info.Goods.List[0].ShopPrice}}</view>
+          </view>
+          <view class="num">x
+            <view class="numxx">{{info.Goods.List[0].Quantity}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view> -->
+  <!-- <view class="pro-list" wx:if="{{info.Goods.List.length > 1}}">
+    <view class="godeta">
+      <view class="ul">
+        <navigator class="li" url="../productsInfo/productsInfo?id={{item.GoodsId}}" wx:for="{{info.Goods.List}}">
+          <view class="img" style="background-image: url({{item.Image.SmallThumbnail}})"></view>
+          <view class="num">x
+            <view class="span">{{item.Quantity}}</view>
+          </view>
+        </navigator>
+      </view>
+      <view class="allnum" style="background-image: url({{config.static_url+'ico19.png'}})">共{{info.Goods.List.length}}件</view>
+    </view>
+  </view> -->
+  <view class="line pro-money">
+    <view class="tt ">商品金额</view>
+    <view class="price sellprice">¥
+      <view class="amo">
+        <view class="int">{{info.GoodsAmount}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="line postage">
+    <view class="tt">邮费</view>
+    <view class="price mailprice">¥
+      <view class="amo">
+        <view class="int">{{info.ShippingFee}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="line" style="margin-top: 20rpx">
+     <view class="tt">可用积分{{info.AvailableIntegral}}分，最高可抵{{diya}}元</view> 
+    <view class="body-view">
+      <switch bindchange="switchChange" />
+    </view>
+  </view> -->
+  <view class="line">
+    <view class="tt w145">订单备注：</view>
+    <input type="text" class="text fl  bz" maxlength="50" bindinput="message" placeholder="选填，给卖家留言（限50字）" />
+  </view>
+
+
+  <view class="car-list">
+    <view class="hj">
+      合计：
+      <view class="price">¥
+        <view class="amo">
+          {{allprice}}
+        </view>
+      </view>
+      <view class="postage">（含邮费{{info.ShippingFee}}元）</view>
+    </view>
+    <view class="balance" bindtap="submit">确认订单</view>
+
+  </view>
+  <view style="width:100%;height:99rpx;"></view>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

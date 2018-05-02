@@ -1,0 +1,51 @@
+<!--pages/checkComment/checkComment.wxml-->
+<view class="che-com" id="main">
+  <view class="box" wx:for="{{info}}" data-index="{{indexs}}" wx:for-index="indexs">
+    <view class="pro-style">
+      <view class="proLeft">
+        <navigator url="product.html?id={{item.GoodsId}}" class="img" style="background-image: url({{item.MainImage.SmallThumbnail}})"></navigator>
+        <view class="info">
+          <view class="name">{{item.GoodsName}}</view>
+          <view class="color" wx:if="{{item.GoodsAttribute}}">
+             <view class="span">{{item.GoodsAttribute}}</view>
+            <!-- <view class="span" wx:for="{{item.shuxin}}" wx:for-item="sx">{{item.GoodsAttribute}} </view> -->
+          </view>
+        </view>
+      </view>
+      <view class="num">
+        <view class="price">¥ {{item.Price}}</view>
+        <view class="number">x {{item.Quantity}}</view>
+      </view>
+
+    </view>
+    <view class="content">
+      <view class="top">
+        <view class="name" wx:if="{{item.IsAnonymity}}">匿名</view>
+        <view class="name" wx:else="">{{item.MemberName}}</view>
+        <view class="ul">
+          <view class="li" style="background-image:url({{item.Score<1?config.static_url+'ico26.png':config.static_url+'ico27.png'}})"></view>
+         <view class="li" style="background-image:url({{item.Score<2?config.static_url+'ico26.png':config.static_url+'ico27.png'}})"></view>
+         <view class="li" style="background-image:url({{item.Score<3?config.static_url+'ico26.png':config.static_url+'ico27.png'}})"></view>
+         <view class="li" style="background-image:url({{item.Score<4?config.static_url+'ico26.png':config.static_url+'ico27.png'}})"></view>
+         <view class="li" style="background-image:url({{item.Score<5?config.static_url+'ico26.png':config.static_url+'ico27.png'}})"></view>
+        </view>
+        <view class="time">{{item.EvaluateTime}}</view>
+      </view>
+      <view class="words">{{item.Content}}</view>
+      <!-- <view class="img" wx:if="{{item.EvaluateImages}}">
+        <image src="{{items.RelativePath}}"  wx:for="{{item.EvaluateImages}}" wx:for-item="items" data-index='{{index}}' data-outindex="{{indexs}}"></image>
+      </view> -->
+      <view class="reply" wx:if="{{item.ReplyContent}}">
+        {{item.ReplyContent}}
+        <view class="time">{{item.ReplyTime}}</view>
+        <view class="i"></view>
+      </view>
+      
+    </view>
+  </view>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

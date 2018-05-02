@@ -1,0 +1,45 @@
+.cascade_box{
+    font-size:28rpx;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    transform: translateY(2000px);  
+    z-index: 40;
+}
+.cascade_hei{
+    width: 100%;
+    background: #000;
+    position: absolute;
+    top:0;
+    bottom:0;
+    opacity: 0.5;
+}
+.cascade_find{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: #fff;
+    padding-bottom: 50rpx;
+}
+.quxiao,.queren{
+    display: block;
+    position: absolute;
+    width: 100rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    /*background: #00f;*/
+    text-align: center;
+    color: #5BB3FF;
+    font-size:30rpx;
+}
+.queren{
+    right: 0;
+    top: 0;
+}
+.cascade_header{
+    height: 80rpx;
+    width: 100%;
+    margin-bottom: 20rpx;
+}

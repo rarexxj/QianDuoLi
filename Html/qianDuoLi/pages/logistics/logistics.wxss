@@ -1,0 +1,82 @@
+/* pages/logistics/logistics.wxss */
+.addressBox{
+  padding: 46rpx 0;
+  background: #fff;
+  position: relative;
+  box-shadow: 0 0 24rpx 0 rgba(0,0,0,0.12);
+}
+.addressBox .wzLogo{
+  width: 27rpx;
+  height: 34rpx;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top:50%;
+  margin-top: -17rpx;
+  left: 40rpx;
+}
+.address{
+  line-height: 40rpx;
+  width: 580rpx;
+  display: block;
+  margin: 0 auto;
+  font-size: 28rpx;
+  color: #262A30;
+}
+.info{
+  font-size: 26rpx;
+  color: #ABACAD;
+  width: 460rpx;
+  margin-left: 37rpx;
+  min-height: 160rpx;
+}
+.logBox{
+  padding: 52rpx 76rpx;
+  background: #fff;
+}
+.staBox{
+  display: flex;
+  justify-content: space-between;
+}
+.date{
+  font-size: 26rpx;
+  color: #ABACAD;
+  width: 150rpx;
+}
+.time{
+  font-size: 22rpx;
+  color: #ABACAD;
+  width: 150rpx;
+  text-align: right;
+}
+.staLogo{
+  width: 32rpx;
+  height: 32rpx;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.staLogo2{
+  width: 32rpx;
+  height: 100%;
+  background-repeat: repeat-y;
+  background-position: center;
+}
+.timeBox{
+  margin-right: 37rpx;
+}
+.kdInfo{
+  display: flex;
+  justify-content: space-between;
+  width: 580rpx;
+  margin-bottom: 10rpx;
+  margin: 0 auto;
+}
+.kdWz {
+  line-height:40rpx;
+display:block;
+font-size:28rpx;
+color:#262A30;
+}

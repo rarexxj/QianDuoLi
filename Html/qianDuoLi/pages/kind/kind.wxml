@@ -1,0 +1,27 @@
+<!--pages/kind/kind.wxml-->
+<view class="search-content" id="search-content">
+  <view class="class-box">
+    <!-- <block wx:for="{{info.GoodsCategorys}}">
+      <view class="class-title">{{item.Name}}</view>
+      <view class="class-box-list">
+        <navigator class="class-box-item" wx:for="{{item.ChildGoodsCategorys}}" wx:for-item="listTwo" url="../productsList/productsList?id={{listTwo.Id}}">
+          <view class="c-b-i-tpic" style="background-image: url{{listTwo.CategoryImage.MediumThumbnail}}"></view>
+          <view class="c-b-i-name">{{listTwo.Name}}</view>
+        </navigator>
+      </view>
+    </block> -->
+    <block>
+      <view class="class-box-list">
+        <navigator class="class-box-item" url="../productsList/productsList?id={{item.Id}}" wx:for="{{info.GoodsCategorys}}">
+          <view class="c-b-i-tpic" style="background-image: url({{item.Image.MediumThumbnail}})"></view>
+          <view class="c-b-i-name">{{item.Name}}</view>
+        </navigator>
+      </view>
+    </block>
+  </view>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

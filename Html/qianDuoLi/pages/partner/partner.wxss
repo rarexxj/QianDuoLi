@@ -1,0 +1,431 @@
+/* pages/partner/partner.wxss */
+
+.walletTop {
+  padding:  30rpx 14rpx;
+  background: #fff;
+}
+
+.wallet .moneyinfo {
+  position: relative;
+  background-size: 722rpx 343rpx;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 722rpx;
+  height: 343rpx;
+  padding:68rpx 0 0 0rpx;
+  box-sizing: border-box;
+}
+
+.wallet .moneyinfo .tt {
+  padding-left:42rpx;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  color: #b3b3b3;
+}
+
+.wallet .moneyinfo .price {
+  font-family: 'Arial';
+  font-size: 88rpx;
+  line-height: 88rpx;
+  color: #e65555;
+  margin-top: 20rpx;
+  margin-left:42rpx;
+}
+
+.wallet .moneyinfo .wt {
+  font-size: 26rpx;
+  line-height: 26rpx;
+  color: #b3b3b3;
+  margin-top: 30rpx;
+  margin-left: 42rpx;
+  display: flex;
+}
+
+.wallet .moneyinfo .wt .wtPrice {
+  line-height: 26rpx;
+  color: #333;
+  margin-right: 20rpx;
+}
+
+.wallet .moneyinfo .wt .wtTitle {
+  margin-right: 20rpx;
+}
+
+.wallet .moneyinfo .wd {
+  width: 100rpx;
+  height: 40rpx;
+  background: #fff;
+  border: 1px solid #5bb3ff;
+  border-radius: 20rpx;
+  color: #5bb3ff;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 40rpx;
+  display: block;
+  position: absolute;
+  right: 35rpx;
+  top: 131rpx;
+}
+
+.wallet .moneyinfo .wd1 {
+  width: 100rpx;
+  height: 40rpx;
+  background: #5bb3ff;
+  border: 1px solid #5bb3ff;
+  border-radius: 20rpx;
+  color: #fff;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 40rpx;
+  display: block;
+  position: absolute;
+  right: 35rpx;
+   top: 129rpx;
+}
+
+.wallet .title {
+  margin-top: 25rpx;
+  line-height: 85rpx;
+  font-size: 32rpx;
+  color: #333;
+  padding-left: 15rpx;
+  border-bottom: 1px solid #e8e8e8;
+  background: #fff;
+}
+
+.wallet .list .li {
+  padding: 17rpx 15rpx 15rpx;
+  height: 97rpx;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  height: 129rpx;
+  position: relative;
+}
+
+.wallet .list .tt {
+  line-height: 52rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.wallet .list .ti {
+  font-size: 24rpx;
+  color: #c6c6c6;
+  line-height: 45rpx;
+}
+
+.wallet .list .num {
+  font-size: 30rpx;
+  line-height: 30rpx;
+  position: absolute;
+  right: 15rpx;
+  top: 27rpx;
+}
+
+.wallet .list .jia {
+  color: #e01818;
+}
+
+.wallet .list .jian {
+  color: #59cb16;
+}
+
+.wallet .list .num {
+  font-size: 50rpx;
+  line-height: 30rpx;
+  margin-top: 20rpx;
+}
+
+.parterPlan {
+  font-size: 26rpx;
+  color: #b3b3b3;
+  text-align: center;
+  display: block;
+  position: absolute;
+  right: 35rpx;
+  top: 61rpx;
+  background-size: 29rpx 29rpx;
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 40rpx;
+}
+
+.partner .partnerUl {
+  width: 100%;
+  display: flex;
+}
+
+.partner .partnerLi {
+  width: 50%;
+  border-right: 1px solid #e8e8e8;
+  border-top: 1px solid #e8e8e8;
+  height: 130rpx;
+  text-align: center;
+  line-height: 36rpx;
+}
+
+.partner .partnerBox {
+  display: block;
+  background: #fff;
+  height: 130rpx;
+  width: 100%;
+  color: #333;
+  box-sizing: border-box;
+  padding-top: 33rpx;
+}
+
+.partner .num {
+  font-size: 24rpx;
+  line-height: 24rpx;
+}
+
+.partner .num .partPrice {
+  font-size: 36rpx;
+  line-height: 36rpx;
+  display: inline-block;
+}
+
+.partner .p {
+  font-size: 24rpx;
+}
+
+.parterBox {
+  padding: 0 20rpx;
+  margin-top: 50rpx;
+}
+
+.submit {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  height: 88rpx;
+  background: #5bb3ff;
+  font-size: 36rpx;
+  color: #fff;
+  margin: 35rpx auto;
+  border: 0;
+  border-radius: 7rpx;
+  text-align: center;
+  line-height: 88rpx;
+}
+
+.wallet .btns {
+  border-bottom: 1px solid #e8e8e8;
+  border-top: 1px solid #e8e8e8;
+  display: flex;
+}
+
+.wallet .btn {
+  width: 50%;
+  height: 84rpx;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 84rpx;
+  border-bottom: 4rpx solid #fff;
+  background: #fff;
+}
+
+.wallet .btn.cur {
+  color: #5bb3ff;
+  border-color: #5bb3ff;
+}
+
+.wallet .teamNum {
+  display: inline-block;
+}
+
+.record-con.db {
+  display: block;
+}
+
+
+
+.record-con .li {
+  padding: 16rpx 15rpx;
+  border-bottom: 1px solid #e8e8e8;
+  background: #fff;
+}
+
+.record-con .top {
+  line-height: 52rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.record-con .bot {
+  line-height: 46rpx;
+  font-size: 24rpx;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+}
+
+.record-con .num {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.record-con .money {
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #333;
+}
+
+.record-con .money .span {
+  color: #e84608;
+  font-size: 30rpx;
+  line-height: 52rpx;
+  display: inline-block;
+}
+
+.team-con.db {
+  display: block;
+}
+
+.team-con {
+}
+
+.team-con .li {
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  padding: 17rpx 15rpx;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+}
+.team-con .li .teamLiL{
+  display: flex;
+}
+.team-con .img {
+  width: 100rpx;
+  height: 100rpx;
+}
+.team-con .img image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.team-con .info {
+  padding-left: 22rpx;
+  line-height: 100rpx;
+}
+
+.team-con .name {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.team-con .id {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.team-con .money {
+  font-size: 24rpx;
+  line-height: 100rpx;
+  color: #333;
+}
+
+.team-con .money .span {
+  font-size: 30rpx;
+  color: #e84608;
+  display: inline-block;
+}
+
+
+.mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 30;
+}
+.mask .box {
+    margin-top: 236rpx;
+    position: relative;
+}
+.mask .ewm {
+    width: 300rpx;
+    height: 300rpx;
+    background: #fff;
+    padding: 0rpx;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+.mask .p {
+    font-size: 36rpx;
+    line-height: 48rpx;
+    color: #fff;
+    text-align: center;
+    margin-top: 44rpx;
+}
+.success {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+.success .box {
+    width: 610rpx;
+    height: 380rpx;
+    margin: 248rpx auto 0;
+    background: #fff;
+    border-radius: 8rpx;
+    box-sizing: border-box;
+    padding-top: 35rpx;
+}
+.success .p {
+    margin: 19rpx auto 0;
+    width: 470rpx;
+    font-size: 36rpx;
+    line-height: 53rpx;
+    color: #333;
+}
+.success .goshopp {
+    width: 304rpx;
+    height: 96rpx;
+    margin-top: 35rpx;
+    text-align: center;
+    font-size: 30rpx;
+    color: #5BB3FF;
+    line-height: 96rpx;
+    border-right: 1rpx solid #e8e8e8;
+    border-top: 1rpx solid #e8e8e8;
+}
+.success .wait {
+    width: 304rpx;
+    height: 96rpx;
+    margin-top: 35rpx;
+    text-align: center;
+    font-size: 30rpx;
+    color: #666;
+    line-height: 96rpx;
+    border-top: 1rpx solid #e8e8e8;
+}
+.success .goBox{
+  display: flex;
+}
+
+.success .failico {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.success .tb {
+    width: 87rpx;
+    height: 87rpx;
+    margin: 0 auto;
+}
+.canvas-box {
+  position:fixed;
+  top:999999rpx;
+  left:0;
+}

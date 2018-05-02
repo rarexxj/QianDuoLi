@@ -1,0 +1,105 @@
+/* pages/set/set.wxss */
+
+.my .submit {
+  width: 610rpx;
+}
+
+.my .head {
+  padding: 16rpx 15rpx;
+  background: #fff;
+  position: relative;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.my .head .title {
+  line-height: 100rpx;
+}
+
+.my .head .img {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 30rpx;
+}
+
+.my .head .img image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.avatorRight {
+  display: flex;
+  position: relative;
+}
+
+.my .title {
+  font-size: 30rpx;
+  color: #333;
+  line-height: 88rpx;
+}
+
+.my .line {
+  border-bottom: 1px solid #e8e8e8;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.my .line.martop {
+  margin-top: 20rpx;
+}
+
+.my .line navigator {
+  display: flex;
+  justify-content: space-between;
+  height: 88rpx;
+  padding: 0 15rpx;
+  width: 100%;
+  position: relative;
+}
+
+.my .line .titleRight {
+  position: relative;
+}
+
+.my .line .p {
+  font-size: 26rpx;
+  color: #999;
+  line-height: 88rpx;
+  margin-right: 30rpx;
+}
+
+.line .jt ,.head .jt{
+  width: 13rpx;
+  height: 24rpx;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -12rpx;
+  z-index: 2;
+}
+
+.line.typeTwo .jt {
+  right: 15rpx;
+}
+
+.submit {
+  width: 610rpx;
+  display: block;
+  height: 88rpx;
+  background: #5BB3FF;
+  font-size: 36rpx;
+  color: #fff;
+  margin: 77rpx auto 0;
+  border: 0;
+  border-radius: 7rpx;
+  text-align: center;
+  line-height: 88rpx;
+}

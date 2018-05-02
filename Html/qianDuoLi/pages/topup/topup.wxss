@@ -1,0 +1,67 @@
+/* pages/top/top.wxss */
+.topUp .name{
+    width:156rpx;
+    font-size:28rpx;
+    color:#333333;
+    line-height: 100rpx;
+}
+.importBox{
+    padding-left: 20rpx;
+    background: #fff;
+    display: flex;
+    margin-bottom: 20rpx;
+}
+.importBox input{
+    font-size:28rpx;
+    color:#333333;
+    height:100rpx;
+    background: #fff;
+}
+.importBox input::-webkit-input-placeholder{
+    font-size:28rpx;
+    color:#c7c7cd;
+}
+.sell{
+    font-size:34rpx;
+    color:#009dff;
+    text-align: center;
+    display: block;
+}
+.topup{
+    font-size:24rpx;
+    color:#68bffe;
+    text-align: center;
+    display: block;
+}
+.priceIn{
+    width:222rpx;
+    height:120rpx;
+    background: #fff;
+    padding-top: 19rpx;
+    box-sizing: border-box;
+    margin-right: 18rpx;
+    margin-bottom: 20rpx;
+    float: left;
+}
+.priceIn.active{
+    border:1px solid #68bffe;
+}
+.priceIn:nth-child(3n){
+    margin-right: 0;
+}
+.priceBox{
+    padding:0 20rpx;
+}
+.topUp .next{
+    background:#009dff;
+    border-radius:8rpx;
+    text-align: center;
+    line-height: 90rpx;
+    font-size: 34rpx;
+    color: #fff;
+    width:700rpx;
+    height:90rpx;
+    margin:0 auto;
+    margin-top: 200rpx;
+    display: block;
+}

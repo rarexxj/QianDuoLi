@@ -1,0 +1,43 @@
+<!--pages/wallet/wallet.wxml-->
+<view class="wallet">
+  <view class="walletTop">
+    <view class="moneyinfo" style="background-image:url({{config.static_url+'img8.png'}})">
+      <view class="tt">可提现余额(元)</view>
+      <view class="price">{{wallet.Available}}</view>
+      <view>
+        <view></view>
+      </view>
+      <view class="wt">
+        <view  class="wtTitle">
+          当前账户总金额(元)
+        </view>
+        <view class="wtPrice">{{wallet.TotalMoney}}</view>
+        <view  class="wtTitle">
+          提现中金额(元)
+        </view>
+        <view class="wtPrice">{{wallet.Withdrawals}}</view>
+      </view>
+      <view class="wd1" bindtap='topUp'>充值</view>
+      <view class="wd" bindtap='tiXian'>提现</view>
+      <!-- <navigator url="../topup/topup" class="wd1">充值</navigator> -->
+      <!-- <navigator url="../withdrawals/withdrawals" class="wd">提现</navigator> -->
+    </view>
+  </view>
+  <view class="title">资金变动记录</view>
+
+  <scroll-view class="list" bindscrolltolower="comLoad" scroll-y>
+    <view class="ul" >
+      <view class="li" wx:for="{{comInfo}}">
+        <view class="tt">{{item.Remark}}</view>
+        <view class="ti">交易时间：{{item.CreateTime}}</view>
+        <view class="num jia" wx:if="{{item.BillType==1}}">+{{item.Money}}</view>
+        <view class="num jian" wx:if="{{item.BillType==2}}">-{{item.Money}}</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

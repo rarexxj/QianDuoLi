@@ -1,0 +1,103 @@
+<!--pages/productsList/productsList.wxml-->
+<view class="topNav">
+  <view class="products-nav">
+    <view class="left ">
+      <view class="sort chobtn {{(curIndex==0||curIndex==1||curIndex==2)?'cur':''}}" style="background-image:url({{(curIndex==0||curIndex==1||curIndex==2)?config.static_url+'ico22.png':config.static_url+'ico21.png'}})" bindtap="onPickHeaderClick">综合排序</view>
+      <view class="num chobtn {{curIndex==3?'cur':''}}" data-nSortType="3" bindtap="navChoose">销量优先</view>
+      <view class="num chobtn {{curIndex==4?'cur':''}}" data-nSortType="4" bindtap="navChoose">热门</view>
+      <view class="num new chobtn {{curIndex==5?'cur':''}}" data-nSortType="5" bindtap="navChoose">新品</view>
+      <!-- <view class="screen chobtn" bindtap='sift' data-choose="false">筛选</view> -->
+    </view>
+    <view class="btn" style="background-image:url({{config.static_url+'ico24.jpg'}})" bindtap="goSearch"></view>
+  </view>
+  <view class="sort-mask {{needAnimation ? (openPicker ? 'slidown' : 'slidup') : ''}}">
+    <view class="sort-box">
+      <view class="ul">
+        <view class="li {{curIndex==index?'typecur':''}}" wx:for="{{navList}}" style="background-image:url({{curIndex==index?config.static_url+'ico24.png':''}})" bindtap="navChoose" data-nSortType="{{index}}">{{item.value}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<scroll-view class="pro-list" id="pro-list" scroll-y bindscrolltolower="upLoad">
+  <view class="nothing" wx:if="{{!(info.length)}}">
+    <view class="tb" style="background-image:url({{config.static_url+'img7.png'}})"></view>
+    <view class="p">抱歉，没有找到符合条件的商品</view>
+  </view>
+  <view wx:else="">
+    <view class="box" wx:for="{{info}}">
+      <navigator url="../productsInfo/productsInfo?id={{item.Id}}" class="navA">
+        <view class="img" style="background-image: url({{item.Image.MediumThumbnail}})"></view>
+        <view class="info">
+          <view class="tt">{{item.Name}}</view>
+          <view class="tc">
+            <view class="int">{{item.PayAmount}}人已付款</view>
+          </view>
+          <view class="bot">
+            <view class="price">¥
+              <view class="view">{{item.ShopPrice}}</view>
+              <view class="oldprice">¥{{item.OriginalPrice}}</view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</scroll-view>
+
+
+<view class="search-box" id="search_box" wx:if="{{searchBtn}}">
+  <view class="content">
+    <view class="search">
+      <view class="searchLBox">
+        <view wx:if="{{closeBtn}}" class="close" bindtap="close" style="background-image:url({{config.static_url+'back.png'}})"></view>
+        <input type="text" class="text" bindinput="searchtext" placeholder="搜索关键字" />
+      </view>
+      <view class="delete"></view>
+    </view>
+    <view class="btn" bindtap="search">搜索</view>
+  </view>
+  <view class="con" wx:if="{{!categoryBtn}}">
+    <view class="p">大家都在搜...</view>
+    <view class="ul">
+      <view wx:for="{{tags}}" bindtap="tagText" class="tagName" data-item="{{item}}">{{item}}</view>
+
+    </view>
+  </view>
+
+</view>
+
+<!-- <view class="screen-mask" id="screen-mask" wx:if="{{screensta}}">
+    <view class="screen-box">
+        <view class="box price">
+            <view class="tit">价格</view>
+            <view class="section" style="background-image:url({{config.static_url+'img6.jpg'}})">
+                <input type="tel" class="min" v-model="min"/>
+                <input type="tel" class="max" v-model="max"/>
+            </view>
+        </view>
+        <view class="box brand" wx:if="{{filterInfo.Brand.length}}">
+            <view class="tit">品牌</view>
+            <view class="content">
+                <view class="ul">
+                    <view class="li" wx:for="{{filterInfo.Brand}}" bindtap="stype" data-id="filterInfo.brand.Id">{{item.Value}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="box others" wx:if="{{others.length}}">
+            <view class="tit">其他属性</view>
+            <view class="content">
+                <view class="os" data-id="others.Id" wx:for="other">
+                    <view class="osa" wx:for="otherlist in others.otherlist">{{otherlist}}</view>
+                </view>
+            </view>
+        </view>
+
+    </view>
+    <view class="screen-btn" bindtap="paixu">确定</view>
+</view> -->
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+  <view class="msg-box">{{msgTitle}}</view>
+</view>

@@ -1,0 +1,83 @@
+<!--pages/shopcar/shopcar.wxml-->
+<view class="shopcar" id="main">
+  <view class="search-box" wx:if="{{!Carts.length}}">
+    <view class="nothing ">
+      <view class="tb " style="background-image: url({{config.static_url+'img3.png'}})"></view>
+      <view class="p">暂无购物车商品</view>
+      <navigator url="../index/index" open-type="switchTab" class="NoBnt">随便逛逛</navigator>
+    </view>
+  </view>
+  <view wx:else="">
+    <view class="box" wx:for="{{Carts}}" wx:key="{{carts}}">
+      <view class="ccheck" wx:if="{{item.Status == 1}}" data-index="{{index}}" bindtap="choose" style="background-image:url({{item.choose?config.static_url+'ico11.png':config.static_url+'ico10.png'}})"></view>
+      <view class="invalid" wx:if="{{item.Status==0}}" style="background-image:url({{config.static_url+'ico15.png'}})"></view>
+      <view class="img" style="background-image: url({{item.Image.MediumThumbnail}})">
+        <navigator url="../productsInfo/productsInfo?id={{item.GoodsId}}"></navigator>
+      </view>
+      <view class="info">
+        <view class="tt">
+          <navigator url="../productsInfo/productsInfo?id={{item.GoodsId}}">{{item.GoodsName }}
+          </navigator>
+        </view>
+        <view class="tc">
+          <view class="int">
+            <view class="span" wx:for="{{item.shuxin}}" wx:for-item="sx">{{sx}}</view>
+          </view>
+          <view class="num">x
+            <view class="span">{{item.Quantity}}</view>
+          </view>
+        </view>
+        <view class="bot">
+          <view class="price">¥
+            <view class="amo">{{item.Price}}
+            </view>
+          </view>
+          <view class="edit" bindtap="edit" data-index="{{index}}">编辑</view>
+        </view>
+      </view>
+
+      <view class="editbox" wx:if="{{item.showBox}}">
+        <view class="numbox" data-max="5">
+          <view class="jian" style="background-image:url({{config.static_url+'ico16.jpg'}})" bindtap='jian' data-index="{{index}}"></view>
+          <input type="text" class="amount" value="{{item.Quantity}}" disabled="true" />
+          <view class="jia" style="background-image:url({{config.static_url+'ico17.jpg'}})" bindtap='add' data-index="{{index}}"></view>
+        </view>
+        <view class="good-name">
+          <view class="span" wx:for="{{item.shuxin}}" wx:for-item="sx">{{sx}} </view>
+        </view>
+        <view class="btns">
+          <view class="delete" bindtap='del' data-id="{{item.Id}}">删除</view>
+          <view class="ok" bindtap='editCarts' data-index="{{index}}" data-id="{{item.Id}}">完成</view>
+        </view>
+      </view>
+    </view>
+    <view class="clearsc" bindtap="clearsc">清除失效商品</view>
+    <view style="width:100%;height:99rpx;"></view>
+    <view class="car-list">
+      <view class="carListChose">
+        <view class="choose" bindtap="allChoose" data-choose="false">
+          <!-- <view class="['pcheck',{'cur':pchoose}]" bindtap="pchoose=!pchoose"></view> -->
+          <view class="pcheck" style="background-image:url({{allChoose?config.static_url+'ico11.png':config.static_url+'ico10.png'}})"></view>
+          <view class="allChoose">全选</view>
+        </view>
+
+        <view class="total">
+          <view class="p">合计：
+            <view class="i">￥</view>
+            <view class="amo">{{all}}
+            </view>
+          </view>
+          <view class="noyF">不含运费</view>
+        </view>
+      </view>
+
+      <view class="balance" bindtap="submit">结算(<view class="span">{{len}}</view>)
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>

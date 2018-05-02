@@ -1,0 +1,14 @@
+<!--pages/sex/sex.wxml-->
+<view class="sexBox">
+    <view class="line">
+        <view class="sex" bindtap='choose' wx:for="{{info}}" data-index="{{index+1}}">
+          <image src="{{curIndex==index+1?config.static_url+'ico11.png':config.static_url+'ico10.png'}}"></image>
+          <text>{{item.sex}}</text>
+        </view>
+    </view>
+    <button bindtap="fix">提交</button>
+</view>
+<!--msg-->
+<view class="msg {{msgShow?'on':''}}">
+    <view class="msg-box">{{msgTitle}}</view>
+</view>
